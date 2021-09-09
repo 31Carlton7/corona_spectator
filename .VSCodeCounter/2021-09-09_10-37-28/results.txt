@@ -1,0 +1,163 @@
+Date : 2021-09-09 10:37:28
+Directory : /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator
+Total : 84 files,  4183 codes, 132 comments, 379 blanks, all 4694 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         52 |      3,247 |         24 |        307 |      3,578 |
+| JSON       |          9 |        535 |          0 |          2 |        537 |
+| XML        |         13 |        235 |         51 |         14 |        300 |
+| Groovy     |          3 |         83 |          3 |         20 |        106 |
+| YAML       |          1 |         38 |         53 |         19 |        110 |
+| Markdown   |          2 |         24 |          0 |         12 |         36 |
+| Swift      |          1 |         12 |          0 |          2 |         14 |
+| Properties |          2 |          8 |          1 |          2 |         11 |
+| C++        |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                                   | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                                      |         84 |      4,183 |        132 |        379 |      4,694 |
+| android                                                                                                                                                |         13 |        192 |         53 |         31 |        276 |
+| android/app                                                                                                                                            |          9 |        150 |         52 |         20 |        222 |
+| android/app/src                                                                                                                                        |          7 |         55 |         49 |          9 |        113 |
+| android/app/src/debug                                                                                                                                  |          1 |          3 |          3 |          1 |          7 |
+| android/app/src/main                                                                                                                                   |          5 |         49 |         43 |          7 |         99 |
+| android/app/src/main/res                                                                                                                               |          4 |         26 |         32 |          6 |         64 |
+| android/app/src/main/res/drawable                                                                                                                      |          1 |          4 |          7 |          2 |         13 |
+| android/app/src/main/res/drawable-v21                                                                                                                  |          1 |          4 |          7 |          2 |         13 |
+| android/app/src/main/res/values                                                                                                                        |          1 |          9 |          9 |          1 |         19 |
+| android/app/src/main/res/values-night                                                                                                                  |          1 |          9 |          9 |          1 |         19 |
+| android/app/src/profile                                                                                                                                |          1 |          3 |          3 |          1 |          7 |
+| android/gradle                                                                                                                                         |          1 |          5 |          1 |          1 |          7 |
+| android/gradle/wrapper                                                                                                                                 |          1 |          5 |          1 |          1 |          7 |
+| ios                                                                                                                                                    |         17 |        685 |          2 |         12 |        699 |
+| ios/Flutter                                                                                                                                            |          1 |         26 |          0 |          1 |         27 |
+| ios/Runner                                                                                                                                             |          9 |        307 |          2 |         10 |        319 |
+| ios/Runner.xcodeproj                                                                                                                                   |          1 |          8 |          0 |          1 |          9 |
+| ios/Runner.xcodeproj/project.xcworkspace                                                                                                               |          1 |          8 |          0 |          1 |          9 |
+| ios/Runner.xcodeproj/project.xcworkspace/xcshareddata                                                                                                  |          1 |          8 |          0 |          1 |          9 |
+| ios/Runner/Assets.xcassets                                                                                                                             |          3 |        148 |          0 |          4 |        152 |
+| ios/Runner/Assets.xcassets/AppIcon.appiconset                                                                                                          |          1 |        122 |          0 |          1 |        123 |
+| ios/Runner/Assets.xcassets/LaunchImage.imageset                                                                                                        |          2 |         26 |          0 |          3 |         29 |
+| ios/Runner/Base.lproj                                                                                                                                  |          2 |         61 |          2 |          2 |         65 |
+| ios/build                                                                                                                                              |          6 |        344 |          0 |          0 |        344 |
+| ios/build/XCBuildData                                                                                                                                  |          6 |        344 |          0 |          0 |        344 |
+| lib                                                                                                                                                    |         52 |      3,247 |         24 |        307 |      3,578 |
+| lib/src                                                                                                                                                |         51 |      3,210 |         23 |        300 |      3,533 |
+| lib/src/config                                                                                                                                         |          3 |         96 |          0 |         10 |        106 |
+| lib/src/models                                                                                                                                         |          4 |        478 |          0 |         49 |        527 |
+| lib/src/providers                                                                                                                                      |         10 |         70 |          0 |         20 |         90 |
+| lib/src/repositories                                                                                                                                   |          2 |         42 |          4 |         20 |         66 |
+| lib/src/services                                                                                                                                       |          2 |        157 |          1 |         52 |        210 |
+| lib/src/ui                                                                                                                                             |         30 |      2,367 |         18 |        149 |      2,534 |
+| lib/src/ui/components                                                                                                                                  |          9 |      1,054 |          0 |         41 |      1,095 |
+| lib/src/ui/views                                                                                                                                       |         21 |      1,313 |         18 |        108 |      1,439 |
+| lib/src/ui/views/details_view                                                                                                                          |          4 |        360 |          0 |         23 |        383 |
+| lib/src/ui/views/details_view/components                                                                                                               |          3 |        262 |          0 |         16 |        278 |
+| lib/src/ui/views/home_view.dart                                                                                                                        |          4 |        250 |          0 |         21 |        271 |
+| lib/src/ui/views/home_view.dart/components                                                                                                             |          3 |        161 |          0 |         15 |        176 |
+| lib/src/ui/views/information_view                                                                                                                      |          3 |        370 |          8 |         18 |        396 |
+| lib/src/ui/views/information_view/components                                                                                                           |          2 |         57 |          1 |          6 |         64 |
+| lib/src/ui/views/news_view                                                                                                                             |          5 |        222 |         10 |         22 |        254 |
+| lib/src/ui/views/news_view/components                                                                                                                  |          4 |        178 |         10 |         16 |        204 |
+| lib/src/ui/views/prevention_view                                                                                                                       |          2 |         29 |          0 |          7 |         36 |
+| lib/src/ui/views/prevention_view/components                                                                                                            |          1 |         11 |          0 |          3 |         14 |
+| lib/src/ui/views/symptoms_view                                                                                                                         |          2 |         27 |          0 |          7 |         34 |
+| lib/src/ui/views/symptoms_view/components                                                                                                              |          1 |         11 |          0 |          3 |         14 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                                                               | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/README.md                                                                      | Markdown   |         21 |          0 |         10 |         31 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/build.gradle                                                       | Groovy     |         49 |          3 |         11 |         63 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/google-services.json                                               | JSON       |         46 |          0 |          0 |         46 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/src/debug/AndroidManifest.xml                                      | XML        |          3 |          3 |          1 |          7 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/src/main/AndroidManifest.xml                                       | XML        |         23 |         11 |          1 |         35 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/src/main/res/drawable-v21/launch_background.xml                    | XML        |          4 |          7 |          2 |         13 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/src/main/res/drawable/launch_background.xml                        | XML        |          4 |          7 |          2 |         13 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/src/main/res/values-night/styles.xml                               | XML        |          9 |          9 |          1 |         19 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/src/main/res/values/styles.xml                                     | XML        |          9 |          9 |          1 |         19 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/app/src/profile/AndroidManifest.xml                                    | XML        |          3 |          3 |          1 |          7 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/build.gradle                                                           | Groovy     |         26 |          0 |          5 |         31 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/gradle.properties                                                      | Properties |          3 |          0 |          1 |          4 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/gradle/wrapper/gradle-wrapper.properties                               | Properties |          5 |          1 |          1 |          7 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/android/settings.gradle                                                        | Groovy     |          8 |          0 |          4 |         12 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Flutter/AppFrameworkInfo.plist                                             | XML        |         26 |          0 |          1 |         27 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist | XML        |          8 |          0 |          1 |          9 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/AppDelegate.swift                                                   | Swift      |         12 |          0 |          2 |         14 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json                    | JSON       |        122 |          0 |          1 |        123 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json                  | JSON       |         23 |          0 |          1 |         24 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md                      | Markdown   |          3 |          0 |          2 |          5 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/Base.lproj/LaunchScreen.storyboard                                  | XML        |         36 |          1 |          1 |         38 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/Base.lproj/Main.storyboard                                          | XML        |         25 |          1 |          1 |         27 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/GoogleService-Info.plist                                            | XML        |         34 |          0 |          0 |         34 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/Info.plist                                                          | XML        |         51 |          0 |          1 |         52 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/Runner/Runner-Bridging-Header.h                                            | C++        |          1 |          0 |          1 |          2 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/build/XCBuildData/0814c6965139370c19fe2bd3ffcb5528-buildRequest.json       | JSON       |         58 |          0 |          0 |         58 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/build/XCBuildData/4f0a109bcd620d436786ccfe6ca85b1b-buildRequest.json       | JSON       |         57 |          0 |          0 |         57 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/build/XCBuildData/95c4602fd2fc38cb6ca6f813f1c5567b-buildRequest.json       | JSON       |         57 |          0 |          0 |         57 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/build/XCBuildData/add050d1a923993b97104689f5a8172d-buildRequest.json       | JSON       |         57 |          0 |          0 |         57 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/build/XCBuildData/b1c421de37fafb0f2456023a8d0e1fb2-buildRequest.json       | JSON       |         58 |          0 |          0 |         58 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/ios/build/XCBuildData/ea3aed8b77b5e2ada4a179cb72a53615-buildRequest.json       | JSON       |         57 |          0 |          0 |         57 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/main.dart                                                                  | Dart       |         37 |          1 |          7 |         45 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/config/bottom_navigation_bar.dart                                      | Dart       |         50 |          0 |          4 |         54 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/config/constants.dart                                                  | Dart       |          1 |          0 |          1 |          2 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/config/exceptions.dart                                                 | Dart       |         45 |          0 |          5 |         50 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/models/article.dart                                                    | Dart       |         73 |          0 |         12 |         85 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/models/country_data.dart                                               | Dart       |        171 |          0 |         13 |        184 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/models/state_data.dart                                                 | Dart       |        105 |          0 |         12 |        117 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/models/world_data.dart                                                 | Dart       |        129 |          0 |         12 |        141 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/all_country_data_provider.dart                               | Dart       |          8 |          0 |          2 |         10 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/all_state_data_provider.dart                                 | Dart       |          7 |          0 |          2 |          9 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/articles_future_provider.dart                                | Dart       |          7 |          0 |          2 |          9 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/country_data_provider.dart                                   | Dart       |          9 |          0 |          2 |         11 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/country_repository_provider.dart                             | Dart       |          6 |          0 |          2 |          8 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/news_service_provider.dart                                   | Dart       |          6 |          0 |          2 |          8 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/state_data_provider.dart                                     | Dart       |          9 |          0 |          2 |         11 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/state_repository_provider.dart                               | Dart       |          5 |          0 |          2 |          7 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/statistics_service_provider.dart                             | Dart       |          6 |          0 |          2 |          8 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/providers/world_data_provider.dart                                     | Dart       |          7 |          0 |          2 |          9 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/repositories/country_repository.dart                                   | Dart       |         21 |          2 |         10 |         33 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/repositories/state_repository.dart                                     | Dart       |         21 |          2 |         10 |         33 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/services/news_service.dart                                             | Dart       |         43 |          0 |         18 |         61 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/services/statistics_service.dart                                       | Dart       |        114 |          1 |         34 |        149 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/coronavirus_pie_chart.dart                               | Dart       |        143 |          0 |          4 |        147 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/country_card.dart                                        | Dart       |        302 |          0 |          3 |        305 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/country_name_text.dart                                   | Dart       |          6 |          0 |          1 |          7 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/country_selector.dart                                    | Dart       |         55 |          0 |          4 |         59 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/country_selector_bottomsheet.dart                        | Dart       |        164 |          0 |          9 |        173 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/error_body.dart                                          | Dart       |         33 |          0 |          3 |         36 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/state_card.dart                                          | Dart       |        160 |          0 |          5 |        165 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/state_selector_bottomsheet.dart                          | Dart       |        161 |          0 |         10 |        171 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/components/unexpected_error.dart                                    | Dart       |         30 |          0 |          2 |         32 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/current_view.dart                                             | Dart       |         55 |          0 |         10 |         65 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/details_view/components/country_details_card.dart             | Dart       |        177 |          0 |          8 |        185 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/details_view/components/country_new_cases_card.dart           | Dart       |         64 |          0 |          4 |         68 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/details_view/components/details_view_header.dart              | Dart       |         21 |          0 |          4 |         25 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/details_view/details_view.dart                                | Dart       |         98 |          0 |          7 |        105 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/home_view.dart/components/home_view_header.dart               | Dart       |         13 |          0 |          3 |         16 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/home_view.dart/components/search_bar.dart                     | Dart       |         32 |          0 |          4 |         36 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/home_view.dart/components/world_card.dart                     | Dart       |        116 |          0 |          8 |        124 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/home_view.dart/home_view.dart                                 | Dart       |         89 |          0 |          6 |         95 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/information_view/components/information_view_header.dart      | Dart       |         13 |          0 |          3 |         16 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/information_view/components/who_card.dart                     | Dart       |         44 |          1 |          3 |         48 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/information_view/information_view.dart                        | Dart       |        313 |          7 |         12 |        332 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/news_view/components/article_card_large.dart                  | Dart       |         53 |         10 |          4 |         67 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/news_view/components/article_card_small.dart                  | Dart       |         88 |          0 |          5 |         93 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/news_view/components/article_list.dart                        | Dart       |         26 |          0 |          4 |         30 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/news_view/components/news_view_header.dart                    | Dart       |         11 |          0 |          3 |         14 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/news_view/news_view.dart                                      | Dart       |         44 |          0 |          6 |         50 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/prevention_view/components/prevention_view_header.dart        | Dart       |         11 |          0 |          3 |         14 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/prevention_view/prevention_view.dart                          | Dart       |         18 |          0 |          4 |         22 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/symptoms_view/components/symptoms_view_header.dart            | Dart       |         11 |          0 |          3 |         14 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/lib/src/ui/views/symptoms_view/symptoms_view.dart                              | Dart       |         16 |          0 |          4 |         20 |
+| /Users/carltonaikins/Desktop/Home/Programming/projects/corona_spectator/pubspec.yaml                                                                   | YAML       |         38 |         53 |         19 |        110 |
+| Total                                                                                                                                                  |            |      4,183 |        132 |        379 |      4,694 |
++--------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
