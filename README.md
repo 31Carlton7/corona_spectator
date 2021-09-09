@@ -2,6 +2,15 @@
 
 Corona Spectator is a coronavirus statistics and news app that has real time global COVID-19 stats. It includes useful tips to help guide your way through the pandemic. Be sure to leave a star 🌟.
 
+## About
+
+At first I didn't have the intentions of making Corona Spectator because I personally thought that Coronavirus wasn't as big of an issue as it was last year. However, after taking a look our current circumstances of the Delta Variant, I thought it was necessary to create it. An all in one solution to get all the coronavirus information and help you need is something I think everyone should have during the pandemic. It's a long fight and we all must endure. So I hope this app will help you stay safe 🙏🏾.
+
+## Developer Info
+
+The API's and sources I use to obtain my information are courtesy of [Worldometers](https://www.worldometers.info/coronavirus/), [CSSEGISandData](https://github.com/CSSEGISandData/COVID-19), [Google News RSS Feed](https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en), and [Disease.sh](https://disease.sh/).
+To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Framework and that uses [Dartlang](https://dart.dev) as the programming language. The list of packages the app uses can be found [here](https://github.com/31Carlton7/corona_spectator/blob/master/pubspec.yaml) under the `dependencies` indent. I also used Firebase Analytics and Crashlytics to better understand the users who use the app. There is no form of authentication or database usage.
+
 ## Features
 
 - _Global Stats_: Get coronavirus statistics for ALL countries in the world.
@@ -13,3 +22,9 @@ Corona Spectator is a coronavirus statistics and news app that has real time glo
 - _Symptom Checker (SOON)_: Analyze your current state of being and get see if you may have coronavirus and get recommended to the nearest clinic.
 - _Emergency Contact Hotlines_: Call 911, 119, and 112 straight from the app incase of an emergency.
 - _Quick Links_: Quick links to coronavirus websites to seek more information.
+
+## Socials
+If you have any questions, you can reach me here:
+
+- Instagram: [@31carlton7](https://www.instagram.com/31carlton7/)
+- Email: carltonaikins7@gmail.com
