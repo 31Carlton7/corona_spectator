@@ -33,6 +33,38 @@ Fork or clone this repository or download the code and navigate to the enclosing
 flutter run
 ```
 
+# Screenshots
+
+<table> 
+  <th>Light Mode</th>
+  <tr>
+    <td> 
+      <img width="250" src="https://github.com/31Carlton7/corona_spectator/blob/master/screenshots/screenshot_1.png"> </img>
+    </td>
+    <td>
+      <img width="250" src="https://github.com/31Carlton7/corona_spectator/blob/master/screenshots/screenshot_2.png"> 
+  </img> 
+    </td>
+    <td> 
+        <img width="250" src="https://github.com/31Carlton7/corona_spectator/blob/master/screenshots/screenshot_3.png"> 
+  </img>
+    </td>
+  </tr>
+  
+  <tr>
+     <td>
+       <img width="250" src="https://github.com/31Carlton7/corona_spectator/blob/master/screenshots/screenshot_7.png"> 
+  </img>
+    </td>
+    <td>
+      <img width="250" src="https://github.com/31Carlton7/corona_spectator/blob/master/screenshots/screenshot_4.png">
+    </td>
+    <td> 
+      <img width="250" src="https://github.com/31Carlton7/corona_spectator/blob/master/screenshots/screenshot_6.png">
+    </td>
+  </tr>
+</table>
+
 ## Socials
 
 If you have any questions, you can reach me here:
