@@ -1,0 +1,49 @@
+import 'package:canton_design_system/canton_design_system.dart';
+import 'package:corona_spectator/src/config/exceptions.dart';
+import 'package:corona_spectator/src/models/article.dart';
+import 'package:corona_spectator/src/providers/articles_future_provider.dart';
+import 'package:corona_spectator/src/ui/components/error_body.dart';
+import 'package:corona_spectator/src/ui/components/unexpected_error.dart';
+import 'package:corona_spectator/src/ui/views/news_view/components/article_list.dart';
+import 'package:corona_spectator/src/ui/views/news_view/components/news_view_header.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class NewsView extends StatefulWidget {
+  const NewsView({Key? key}) : super(key: key);
+
+  @override
+  _NewsViewState createState() => _NewsViewState();
+}
+
+class _NewsViewState extends State<NewsView> {
+  @override
+  Widget build(BuildContext context) {
+    return Consumer(
+      builder: (context, watch, child) {
+        final articlesRepo = watch(articlesProvider);
+
+        return articlesRepo.when(
+          error: (e, s) {
+            if (e is Exceptions) {
+              return ErrorBody(e.message, articlesProvider);
+            }
+            return UnexpectedError(articlesProvider);
+          },
+          loading: () => Loading(),
+          data: (articles) {
+            return _content(context, articles);
+          },
+        );
+      },
+    );
+  }
+
+  Widget _content(BuildContext context, List<Article> articles) {
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(child: NewsViewHeader()),
+        ArticleList(articles),
+      ],
+    );
+  }
+}

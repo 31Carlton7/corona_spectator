@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "713395923013",
+    "project_id": "corona-spectator",
+    "storage_bucket": "corona-spectator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713395923013:android:de88cee9f96fb23fa3db2c",
+        "android_client_info": {
+          "package_name": "com.coronaspectator.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713395923013-6rss269a3fojcg7kvnivg1kapi12olgj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaaKma-UVG-kVyLe6-FTVEckfZFN_BaeY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713395923013-6rss269a3fojcg7kvnivg1kapi12olgj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "713395923013-ddhn118aumrqunkjkn65fvm4k33s6vjh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.coronaspectator.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
