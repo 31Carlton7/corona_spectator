@@ -11,7 +11,7 @@ At first I didn't have the intentions of making Corona Spectator because I perso
 ## Developer Info
 
 The API's and sources I use to obtain my information are courtesy of [Worldometers](https://www.worldometers.info/coronavirus/), [CSSEGISandData](https://github.com/CSSEGISandData/COVID-19), [Google News RSS Feed](https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en), and [Disease.sh](https://disease.sh/).
-To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Framework and that uses [Dartlang](https://dart.dev) as the programming language. The list of packages the app uses can be found [here](https://github.com/31Carlton7/corona_spectator/blob/master/pubspec.yaml) under the `dependencies` indent. I also used Firebase Analytics and Crashlytics to better understand the users who use the app. There is no form of authentication or database usage.
+To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Framework and that uses [Dartlang](https://dart.dev) as the programming language. The list of packages the app uses can be found [here](https://github.com/31Carlton7/corona_spectator/blob/master/pubspec.yaml) under the `dependencies` indent. This project is null safe. I also used Firebase Analytics and Crashlytics to better understand the users who use the app. There is no form of authentication or database usage.
 
 ## Features
 
@@ -25,7 +25,16 @@ To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Fra
 - _Emergency Contact Hotlines_: Call 911, 119, and 112 straight from the app incase of an emergency.
 - _Quick Links_: Quick links to coronavirus websites to seek more information.
 
+# Getting Started
+
+Fork or clone this repository or download the code and navigate to the enclosing folder inside your terminal. Then use this command to run:
+
+```
+flutter run
+```
+
 ## Socials
+
 If you have any questions, you can reach me here:
 
 - Instagram: [@31carlton7](https://www.instagram.com/31carlton7/)
