@@ -28,7 +28,6 @@ class StateCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Theme.of(context).backgroundColor,
       margin: const EdgeInsets.symmetric(horizontal: 17),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
