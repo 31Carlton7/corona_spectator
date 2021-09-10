@@ -6,6 +6,8 @@ Corona Spectator is a coronavirus statistics and news app that has real time glo
 
 [License](https://github.com/31Carlton7/corona_spectator/blob/master/LICENSE)
 
+[Screenshots](#screenshots)
+
 ## About
 
 At first I didn't have the intentions of making Corona Spectator because I personally thought that Coronavirus wasn't as big of an issue as it was last year. However, after taking a look our current circumstances of the Delta Variant, I thought it was necessary to create it. An all in one solution to get all the coronavirus information and help you need is something I think everyone should have during the pandemic. It's a long fight and we all must endure. So I hope this app will help you stay safe 🙏🏾.
@@ -27,7 +29,7 @@ To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Fra
 - _Emergency Contact Hotlines_: Call 911, 119, and 112 straight from the app incase of an emergency.
 - _Quick Links_: Quick links to coronavirus websites to seek more information.
 
-# Getting Started
+## Getting Started
 
 Fork or clone this repository or download the code and navigate to the enclosing folder inside your terminal. Then use this command to run:
 
@@ -35,7 +37,7 @@ Fork or clone this repository or download the code and navigate to the enclosing
 flutter run
 ```
 
-# Screenshots
+## Screenshots
 
 <table> 
   <th>Light Mode</th>
