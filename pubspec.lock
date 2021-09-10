@@ -104,8 +104,8 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "06465a24e1cf54e986f67233751e9aa729a40775"
-      url: "git://github.com/31Carlton7/canton_design_system.git"
+      resolved-ref: "52034921934ded814795fbd6da53802f17cd1d7d"
+      url: "https://github.com/31Carlton7/canton_design_system.git"
     source: git
     version: "0.0.1"
   characters:
