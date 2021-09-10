@@ -28,7 +28,7 @@ import 'package:corona_spectator/src/providers/world_data_provider.dart';
 import 'package:corona_spectator/src/ui/components/country_card.dart';
 import 'package:corona_spectator/src/ui/views/home_view.dart/components/home_view_header.dart';
 import 'package:corona_spectator/src/ui/components/state_card.dart';
-import 'package:corona_spectator/src/ui/views/home_view.dart/components/world_card.dart';
+import 'package:corona_spectator/src/ui/components/world_card.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
