@@ -31,7 +31,7 @@ To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Fra
 
 ## Getting Started
 
-Fork or clone this repository or download the code and navigate to the enclosing folder inside your terminal. Then use this command to run:
+Assuming Flutter is installed and setup on your device (If not, follow the steps to do so [here](https://flutter.dev/docs/get-started/install)), Fork, clone, or download the code for this repository and navigate to the enclosing folder inside your terminal. Then use this command to run:
 
 ```
 flutter run
