@@ -37,7 +37,7 @@ Future<void> main() async {
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
 
   /// Lock screen orientation to vertical
-  SystemChrome.setPreferredOrientations(
+  await SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {
     runApp(ProviderScope(child: MyApp()));
   });
