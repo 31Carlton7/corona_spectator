@@ -35,8 +35,9 @@ class ArticleCardLarge extends StatelessWidget {
         }
       },
       child: Card(
-        shape: const SquircleBorder(radius: BorderRadius.zero),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         margin: const EdgeInsets.symmetric(horizontal: 17),
+        color: Theme.of(context).canvasColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
