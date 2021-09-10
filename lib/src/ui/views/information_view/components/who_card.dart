@@ -25,7 +25,6 @@ class WHOCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      // color: Theme.of(context).colorScheme.secondary,
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 12,
