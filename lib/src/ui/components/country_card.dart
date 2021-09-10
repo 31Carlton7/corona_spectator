@@ -33,7 +33,6 @@ class CountryCard extends StatelessWidget {
         CantonMethods.viewTransition(context, DetailsView());
       },
       child: Card(
-        color: Theme.of(context).backgroundColor,
         margin: const EdgeInsets.symmetric(horizontal: 17),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
