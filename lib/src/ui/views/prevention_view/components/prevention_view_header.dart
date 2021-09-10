@@ -22,9 +22,12 @@ class PreventionViewHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ViewHeaderTwo(
-      title: 'Prevention',
-      backButton: true,
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 17),
+      child: ViewHeaderTwo(
+        title: 'Prevention',
+        backButton: true,
+      ),
     );
   }
 }
