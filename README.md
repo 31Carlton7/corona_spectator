@@ -15,7 +15,7 @@ At first I didn't have the intentions of making Corona Spectator because I perso
 ## Developer Info
 
 The API's and sources I use to obtain my information are courtesy of [Worldometers](https://www.worldometers.info/coronavirus/), [CSSEGISandData](https://github.com/CSSEGISandData/COVID-19), [Google News RSS Feed](https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en), and [Disease.sh](https://disease.sh/).
-To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Framework and that uses [Dartlang](https://dart.dev) as the programming language. The list of packages the app uses can be found [here](https://github.com/31Carlton7/corona_spectator/blob/master/pubspec.yaml) under the `dependencies` indent. This project is null safe. I also used Firebase Analytics and Crashlytics to better understand the users who use the app. There is no form of authentication or database usage.
+To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Framework and that uses [Dartlang](https://dart.dev) as the programming language. The list of packages the app uses can be found [here](https://github.com/31Carlton7/corona_spectator/blob/master/pubspec.yaml) under the `dependencies` indent. My UI Package I use to curate the UI can be found [here](https://github.com/31Carlton7/canton_design_system), however I will not be publishing the package on [pub.dev](pub.dev) anytime soon. This project is null safe. I also used Firebase Analytics and Crashlytics to better understand the users who use the app. There is no form of authentication or database usage.
 
 ## Features
 
