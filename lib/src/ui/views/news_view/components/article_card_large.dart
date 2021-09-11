@@ -35,9 +35,9 @@ class ArticleCardLarge extends StatelessWidget {
         }
       },
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        shape: SquircleBorder(side: BorderSide.none, radius: BorderRadius.zero),
         margin: const EdgeInsets.symmetric(horizontal: 17),
-        color: Theme.of(context).canvasColor,
+        color: CantonColors.transparent,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -66,16 +66,6 @@ class ArticleCardLarge extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline6,
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
-            //   child: Text(
-            //     article.getPublishedAtFormattedTime,
-            //     style: Theme.of(context).textTheme.caption.copyWith(
-            //           color: Theme.of(context).colorScheme.secondaryVariant,
-            //           fontWeight: FontWeight.w400,
-            //         ),
-            //   ),
-            // ),
           ],
         ),
       ),
