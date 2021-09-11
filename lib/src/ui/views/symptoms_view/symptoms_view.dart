@@ -16,6 +16,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:corona_spectator/src/ui/views/symptoms_view/components/symptom_card.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:corona_spectator/src/providers/symptom_data_provider.dart';
 import 'package:corona_spectator/src/ui/views/symptoms_view/components/symptoms_view_header.dart';
 
 class SymptomsView extends StatelessWidget {
@@ -23,14 +26,46 @@ class SymptomsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CantonScaffold(body: _content(context));
+    Color _canvasColor() {
+      if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
+        return Theme.of(context).canvasColor;
+      }
+      return Theme.of(context).backgroundColor;
+    }
+
+    return CantonScaffold(
+      padding: EdgeInsets.zero,
+      backgroundColor: _canvasColor(),
+      body: _content(context),
+    );
   }
 
   Widget _content(BuildContext context) {
     return Column(
       children: [
         SymptomsViewHeader(),
+        _body(context),
       ],
+    );
+  }
+
+  Widget _body(BuildContext context) {
+    var items = context.read(symptomDataProvider);
+    return Expanded(
+      child: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Column(
+            children: [
+              SymptomCard(
+                text: items[index].text,
+                iconPath: items[index].iconPath,
+              ),
+              if (index == items.length - 1) Divider(),
+            ],
+          );
+        },
+      ),
     );
   }
 }
