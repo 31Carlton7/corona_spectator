@@ -22,9 +22,12 @@ class SymptomsViewHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ViewHeaderTwo(
-      title: 'Symptoms',
-      backButton: true,
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 17),
+      child: ViewHeaderTwo(
+        title: 'Symptoms',
+        backButton: true,
+      ),
     );
   }
 }
