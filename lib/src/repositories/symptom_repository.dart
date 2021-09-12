@@ -16,29 +16,27 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 import 'package:corona_spectator/src/models/symptom_data.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SymptomRepository {
   final List<SymptomData> _data = [
     SymptomData(
       text: 'Fever or chills',
-      iconPath: 'assets/icons/body_ache.svg',
+      iconPath: FontAwesomeIcons.thermometerFull,
     ),
     SymptomData(
       text: 'Cough',
-      iconPath: 'assets/icons/cough.svg',
+      iconPath: FontAwesomeIcons.headSideCough,
     ),
     SymptomData(
       text: 'Difficulty breathing',
-      iconPath: 'assets/icons/breathing.svg',
+      iconPath: FontAwesomeIcons.lungsVirus,
     ),
     SymptomData(
       text: 'Runny nose',
-      iconPath: 'assets/icons/runny_nose.svg',
+      iconPath: FontAwesomeIcons.boxTissue,
     ),
-    SymptomData(
-      text: 'Body aches',
-      iconPath: 'assets/icons/body_ache.svg',
-    ),
+    SymptomData(text: 'Head aches', iconPath: FontAwesomeIcons.headSideVirus),
   ];
 
   List<SymptomData> get symptoms => _data;
