@@ -26,7 +26,7 @@ class PreventionCard extends StatelessWidget {
 
   final String title;
   final String content;
-  final String iconPath;
+  final IconData iconPath;
 
   @override
   Widget build(BuildContext context) {
@@ -37,28 +37,19 @@ class PreventionCard extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
           child: Row(
             children: [
-              Stack(alignment: Alignment.center, children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    shape: BoxShape.circle,
-                  ),
+              Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                  shape: BoxShape.circle,
                 ),
-                Container(
-                  height: 30,
-                  width: 30,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    shape: BoxShape.circle,
-                  ),
-                  child: SvgPicture.asset(
-                    iconPath,
-                    color: CantonColors.white,
-                  ),
+                child: Icon(
+                  iconPath,
+                  size: 24,
+                  color: CantonColors.white,
                 ),
-              ]),
+              ),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
@@ -73,8 +64,8 @@ class PreventionCard extends StatelessWidget {
                     Text(
                       content,
                       style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                            color:
-                                Theme.of(context).colorScheme.secondaryVariant,
+                            fontSize: 15,
+                            color: Theme.of(context).colorScheme.secondaryVariant,
                           ),
                     ),
                   ],
