@@ -1,4 +1,4 @@
-package com.example.corona_spectator
+package com.coronaspectator.app
 
 import io.flutter.embedding.android.FlutterActivity
 
