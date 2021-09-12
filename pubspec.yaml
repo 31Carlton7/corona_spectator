@@ -29,7 +29,7 @@ dependencies:
     git:
       url: https://github.com/31Carlton7/canton_design_system.git
       ref: master
-  flutter_svg: ^0.22.0
+  font_awesome_flutter: ^9.1.0
 
   # State Management
   flutter_riverpod: ^0.14.0+3
@@ -43,8 +43,7 @@ dependencies:
   # API
   dio: ^4.0.0
   xml2json: ^5.3.1
-  flutter_chat_types: ^3.0.2
-  flutter_link_previewer: ^2.4.2
+  flutter_easyrefresh: ^2.2.1
 
   # Storage
   hive: ^2.0.4
@@ -82,22 +81,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-    # Prevention Icons
-    - assets/icons/calm.svg
-    - assets/icons/home.svg
-    - assets/icons/interactions.svg
-    - assets/icons/person_wearing_mask.svg
-    - assets/icons/social_distancing.svg
-    - assets/icons/vaccine.svg
-    - assets/icons/washing_hands.svg
-
-    # Symptom Icons
-    - assets/icons/body_ache.svg
-    - assets/icons/cough.svg
-    - assets/icons/fever.svg
-    - assets/icons/runny_nose.svg
-    - assets/icons/breathing.svg
+  # assets:
+  # - assets/path/to
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
