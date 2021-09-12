@@ -73,6 +73,7 @@ class StateCard extends StatelessWidget {
                   ),
                   style: Theme.of(context).textTheme.headline1?.copyWith(
                         fontWeight: FontWeight.w500,
+                        fontSize: 45,
                       ),
                 ),
                 SizedBox(height: 5),
@@ -99,20 +100,13 @@ class StateCard extends StatelessWidget {
                         children: [
                           Text(
                             'Active Cases',
-                            style:
-                                Theme.of(context).textTheme.headline6?.copyWith(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryVariant,
-                                    ),
+                            style: Theme.of(context).textTheme.headline6?.copyWith(
+                                  color: Theme.of(context).colorScheme.secondaryVariant,
+                                ),
                           ),
                           Text(
-                            CantonMethods.separateNumberByThreeDigits(
-                                source: data.activeCases!),
-                            style: Theme.of(context)
-                                .textTheme
-                                .headline5
-                                ?.copyWith(
+                            CantonMethods.separateNumberByThreeDigits(source: data.activeCases!),
+                            style: Theme.of(context).textTheme.headline5?.copyWith(
                                   color: Theme.of(context).colorScheme.surface,
                                 ),
                           ),
@@ -134,20 +128,13 @@ class StateCard extends StatelessWidget {
                         children: [
                           Text(
                             'Deaths',
-                            style:
-                                Theme.of(context).textTheme.headline6?.copyWith(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryVariant,
-                                    ),
+                            style: Theme.of(context).textTheme.headline6?.copyWith(
+                                  color: Theme.of(context).colorScheme.secondaryVariant,
+                                ),
                           ),
                           Text(
-                            CantonMethods.separateNumberByThreeDigits(
-                                source: data.totalDeaths!),
-                            style: Theme.of(context)
-                                .textTheme
-                                .headline5
-                                ?.copyWith(
+                            CantonMethods.separateNumberByThreeDigits(source: data.totalDeaths!),
+                            style: Theme.of(context).textTheme.headline5?.copyWith(
                                   color: Theme.of(context).colorScheme.error,
                                 ),
                           ),
@@ -159,8 +146,7 @@ class StateCard extends StatelessWidget {
               ],
             ),
             Text(
-              'Updated at ' +
-                  DateFormat('M/d/yy').format(data.lastUpdated!).toString(),
+              'Updated at ' + DateFormat('M/d/yy').format(data.lastUpdated!).toString(),
               style: Theme.of(context).textTheme.bodyText2?.copyWith(
                     color: Theme.of(context).colorScheme.secondaryVariant,
                   ),
