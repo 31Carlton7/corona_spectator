@@ -112,6 +112,15 @@ class _HomeViewState extends State<HomeView> {
           CountryCard(countryData),
           SizedBox(height: 15),
           WorldCard(worldData),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 21, vertical: 15),
+            child: Center(
+              child: Text(
+                'Sources JHU (github.com/CSSEGISandData), Worldometers (worldometers.info/coronavirus), NovelCovid (github.com/disease-sh/API)',
+                style: Theme.of(context).textTheme.bodyText2,
+              ),
+            ),
+          )
         ],
       ),
     );
