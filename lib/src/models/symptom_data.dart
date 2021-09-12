@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 /*
 Copyright (C) 2021  Carlton Aikins
 
@@ -17,9 +15,13 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+import 'dart:convert';
+
+import 'package:canton_design_system/canton_design_system.dart';
+
 class SymptomData {
   String text;
-  String iconPath;
+  IconData iconPath;
 
   SymptomData({
     required this.text,
@@ -28,7 +30,7 @@ class SymptomData {
 
   SymptomData copyWith({
     String? text,
-    String? iconPath,
+    IconData? iconPath,
   }) {
     return SymptomData(
       text: text ?? this.text,
@@ -52,8 +54,7 @@ class SymptomData {
 
   String toJson() => json.encode(toMap());
 
-  factory SymptomData.fromJson(String source) =>
-      SymptomData.fromMap(json.decode(source));
+  factory SymptomData.fromJson(String source) => SymptomData.fromMap(json.decode(source));
 
   @override
   String toString() => 'SymptomData(text: $text, iconPath: $iconPath)';
@@ -62,9 +63,7 @@ class SymptomData {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is SymptomData &&
-        other.text == text &&
-        other.iconPath == iconPath;
+    return other is SymptomData && other.text == text && other.iconPath == iconPath;
   }
 
   @override
