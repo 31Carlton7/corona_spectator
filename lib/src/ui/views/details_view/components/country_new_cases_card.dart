@@ -27,7 +27,6 @@ class CountryNewCasesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Theme.of(context).backgroundColor,
       margin: const EdgeInsets.symmetric(horizontal: 17),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
@@ -44,9 +43,7 @@ class CountryNewCasesCard extends StatelessWidget {
                       TextSpan(
                         text: DateFormat('MMMd').format(DateTime.now()),
                         style: Theme.of(context).textTheme.headline6?.copyWith(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondaryVariant,
+                              color: Theme.of(context).colorScheme.secondaryVariant,
                             ),
                       ),
                     ],
@@ -60,8 +57,7 @@ class CountryNewCasesCard extends StatelessWidget {
             const SizedBox(height: 10),
             Text.rich(
               TextSpan(
-                text:
-                    '+${CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!)} ',
+                text: '+${CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!)} ',
                 children: [
                   TextSpan(
                     text: 'New cases',
