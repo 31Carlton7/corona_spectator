@@ -44,7 +44,6 @@ class CountryDetailsCard extends StatelessWidget {
 
   Widget _totalCasesCard(BuildContext context) {
     return Card(
-      color: Theme.of(context).backgroundColor,
       shape: SquircleBorder(
         radius: BorderRadius.vertical(
           top: Radius.circular(37),
@@ -66,8 +65,7 @@ class CountryDetailsCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 7),
                 Text(
-                  CantonMethods.separateNumberByThreeDigits(
-                      source: data.totalCases!),
+                  CantonMethods.separateNumberByThreeDigits(source: data.totalCases!),
                   style: Theme.of(context).textTheme.headline1?.copyWith(
                         fontWeight: FontWeight.w500,
                       ),
@@ -89,7 +87,6 @@ class CountryDetailsCard extends StatelessWidget {
 
   Widget _recoveredCard(BuildContext context) {
     return Card(
-      color: Theme.of(context).backgroundColor,
       shape: SquircleBorder(radius: BorderRadius.zero),
       child: Container(
         padding: const EdgeInsets.symmetric(
@@ -109,8 +106,7 @@ class CountryDetailsCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 7),
                 Text(
-                  CantonMethods.separateNumberByThreeDigits(
-                      source: data.totalRecovered!),
+                  CantonMethods.separateNumberByThreeDigits(source: data.totalRecovered!),
                   style: Theme.of(context).textTheme.headline4?.copyWith(
                         fontWeight: FontWeight.w500,
                       ),
@@ -125,7 +121,6 @@ class CountryDetailsCard extends StatelessWidget {
 
   Widget _activeCard(BuildContext context) {
     return Card(
-      color: Theme.of(context).backgroundColor,
       shape: SquircleBorder(radius: BorderRadius.zero),
       child: Container(
         padding: const EdgeInsets.symmetric(
@@ -145,8 +140,7 @@ class CountryDetailsCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 7),
                 Text(
-                  CantonMethods.separateNumberByThreeDigits(
-                      source: data.activeCases!),
+                  CantonMethods.separateNumberByThreeDigits(source: data.activeCases!),
                   style: Theme.of(context).textTheme.headline4?.copyWith(
                         fontWeight: FontWeight.w500,
                       ),
@@ -161,7 +155,6 @@ class CountryDetailsCard extends StatelessWidget {
 
   Widget _deathsCard(BuildContext context) {
     return Card(
-      color: Theme.of(context).backgroundColor,
       shape: SquircleBorder(
         radius: BorderRadius.vertical(
           bottom: Radius.circular(37),
@@ -185,8 +178,7 @@ class CountryDetailsCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 7),
                 Text(
-                  CantonMethods.separateNumberByThreeDigits(
-                      source: data.totalDeaths!),
+                  CantonMethods.separateNumberByThreeDigits(source: data.totalDeaths!),
                   style: Theme.of(context).textTheme.headline4?.copyWith(
                         fontWeight: FontWeight.w500,
                       ),
