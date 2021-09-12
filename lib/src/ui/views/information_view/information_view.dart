@@ -16,11 +16,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:corona_spectator/src/ui/views/information_view/components/cdc_card.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/emergency_card_112.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/emergency_card_119.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/emergency_card_911.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/information_view_header.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/prevention_card.dart';
+import 'package:corona_spectator/src/ui/views/information_view/components/symptom_checker_card.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/symptoms_card.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/who_card.dart';
 
@@ -36,6 +38,7 @@ class InformationView extends StatelessWidget {
     return ListView(
       children: [
         InformationViewHeader(),
+        _symptomCheckerSection(context),
         _healthTipsSection(context),
         _emergencyContactsSection(context),
         _usefulLinksSection(context),
@@ -94,9 +97,18 @@ class InformationView extends StatelessWidget {
             style: Theme.of(context).textTheme.headline4,
           ),
           const SizedBox(height: 7),
+          CDCCard(),
+          Divider(),
           WHOCard(),
         ],
       ),
+    );
+  }
+
+  Widget _symptomCheckerSection(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 12),
+      child: SymptomCheckerCard(),
     );
   }
 }
