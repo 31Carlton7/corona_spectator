@@ -30,6 +30,7 @@ import 'package:corona_spectator/src/ui/views/home_view.dart/components/home_vie
 import 'package:corona_spectator/src/ui/components/state_card.dart';
 import 'package:corona_spectator/src/ui/components/world_card.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomeView extends StatefulWidget {
@@ -86,21 +87,28 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  Widget _content(BuildContext context, WorldData worldData,
-      CountryData countryData, StateData stateData) {
-    var currentlySelectedCountry =
-        context.read(countryRepositoryProvider).getCountry;
-    return RefreshIndicator(
-      onRefresh: () => context.refresh(worldDataProvider),
+  Widget _content(BuildContext context, WorldData worldData, CountryData countryData, StateData stateData) {
+    var currentlySelectedCountry = context.read(countryRepositoryProvider).getCountry;
+    Future<void> refresh() async {
+      await context.refresh(worldDataProvider);
+      await context.refresh(countryDataProvider);
+      await context.refresh(stateDataProvider);
+    }
+
+    return EasyRefresh(
+      header: ClassicalHeader(
+        bgColor: CantonColors.bgSecondary!,
+        enableHapticFeedback: true,
+        float: false,
+      ),
+      onRefresh: () async {
+        return await refresh();
+      },
       child: ListView(
         children: [
           HomeViewHeader(),
-          currentlySelectedCountry == 'USA'
-              ? StateCard(stateData)
-              : Container(),
-          currentlySelectedCountry == 'USA'
-              ? const SizedBox(height: 15)
-              : Container(),
+          currentlySelectedCountry == 'USA' ? StateCard(stateData) : Container(),
+          currentlySelectedCountry == 'USA' ? const SizedBox(height: 15) : Container(),
           CountryCard(countryData),
           SizedBox(height: 15),
           WorldCard(worldData),
