@@ -23,7 +23,7 @@ class NewsViewHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 17, left: 27),
+      padding: const EdgeInsets.only(top: 17, left: 21),
       child: ViewHeaderOne(title: 'News'),
     );
   }
