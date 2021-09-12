@@ -98,11 +98,10 @@ class CountryCard extends StatelessWidget {
                         },
                         child: Text(
                           'Details',
-                          style:
-                              Theme.of(context).textTheme.bodyText1!.copyWith(
-                                    fontWeight: FontWeight.w500,
-                                    color: Theme.of(context).primaryColor,
-                                  ),
+                          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                                fontWeight: FontWeight.w500,
+                                color: Theme.of(context).primaryColor,
+                              ),
                         ),
                       ),
                       CantonActionButton(
@@ -132,20 +131,19 @@ class CountryCard extends StatelessWidget {
                           text: CantonMethods.separateNumberByThreeDigits(
                             source: data.totalCases!,
                           ),
-                          style:
-                              Theme.of(context).textTheme.headline1?.copyWith(
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                          style: Theme.of(context).textTheme.headline1?.copyWith(
+                                fontSize: 45,
+                                fontWeight: FontWeight.w500,
+                              ),
                         ),
                         TextSpan(
                           text: ' +' +
                               CantonMethods.separateNumberByThreeDigits(
                                 source: data.todaysCases!,
                               ),
-                          style:
-                              Theme.of(context).textTheme.headline6?.copyWith(
-                                    color: Theme.of(context).primaryColor,
-                                  ),
+                          style: Theme.of(context).textTheme.headline6?.copyWith(
+                                color: Theme.of(context).primaryColor,
+                              ),
                         ),
                       ],
                     ),
@@ -175,26 +173,15 @@ class CountryCard extends StatelessWidget {
                               children: [
                                 Text(
                                   'Recovered',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline6
-                                      ?.copyWith(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondaryVariant,
+                                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                                        color: Theme.of(context).colorScheme.secondaryVariant,
                                       ),
                                 ),
                                 Text(
-                                  CantonMethods.separateNumberByThreeDigits(
-                                      source: data.totalRecovered!),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline5
-                                      ?.copyWith(
+                                  CantonMethods.separateNumberByThreeDigits(source: data.totalRecovered!),
+                                  style: Theme.of(context).textTheme.headline5?.copyWith(
                                         fontSize: 16,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .background,
+                                        color: Theme.of(context).colorScheme.background,
                                       ),
                                 ),
                               ],
@@ -213,39 +200,21 @@ class CountryCard extends StatelessWidget {
                               children: [
                                 Text(
                                   'Active Cases',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline6
-                                      ?.copyWith(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondaryVariant,
+                                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                                        color: Theme.of(context).colorScheme.secondaryVariant,
                                       ),
                                 ),
                                 Text(
-                                  CantonMethods.separateNumberByThreeDigits(
-                                      source: data.activeCases!),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline5
-                                      ?.copyWith(
+                                  CantonMethods.separateNumberByThreeDigits(source: data.activeCases!),
+                                  style: Theme.of(context).textTheme.headline5?.copyWith(
                                         fontSize: 16,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .surface,
+                                        color: Theme.of(context).colorScheme.surface,
                                       ),
                                 ),
                                 Text(
-                                  '+' +
-                                      CantonMethods.separateNumberByThreeDigits(
-                                          source: data.todaysCases!),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1
-                                      ?.copyWith(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .surface,
+                                  '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!),
+                                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                                        color: Theme.of(context).colorScheme.surface,
                                       ),
                                 ),
                               ],
@@ -264,37 +233,21 @@ class CountryCard extends StatelessWidget {
                               children: [
                                 Text(
                                   'Deaths',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline6
-                                      ?.copyWith(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondaryVariant,
+                                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                                        color: Theme.of(context).colorScheme.secondaryVariant,
                                       ),
                                 ),
                                 Text(
-                                  CantonMethods.separateNumberByThreeDigits(
-                                      source: data.totalDeaths!),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline5
-                                      ?.copyWith(
+                                  CantonMethods.separateNumberByThreeDigits(source: data.totalDeaths!),
+                                  style: Theme.of(context).textTheme.headline5?.copyWith(
                                         fontSize: 16,
-                                        color:
-                                            Theme.of(context).colorScheme.error,
+                                        color: Theme.of(context).colorScheme.error,
                                       ),
                                 ),
                                 Text(
-                                  '+' +
-                                      CantonMethods.separateNumberByThreeDigits(
-                                          source: data.todaysDeaths!),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1
-                                      ?.copyWith(
-                                        color:
-                                            Theme.of(context).colorScheme.error,
+                                  '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysDeaths!),
+                                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                                        color: Theme.of(context).colorScheme.error,
                                       ),
                                 ),
                               ],
@@ -305,8 +258,7 @@ class CountryCard extends StatelessWidget {
                     )
                   : Container(),
               Text(
-                'Updated at ' +
-                    DateFormat('M/d/yy').format(data.lastUpdated!).toString(),
+                'Updated at ' + DateFormat('M/d/yy').format(data.lastUpdated!).toString(),
                 style: Theme.of(context).textTheme.bodyText2?.copyWith(
                       color: Theme.of(context).colorScheme.secondaryVariant,
                     ),
