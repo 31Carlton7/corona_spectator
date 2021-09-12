@@ -23,6 +23,7 @@ import 'package:corona_spectator/src/ui/components/error_body.dart';
 import 'package:corona_spectator/src/ui/components/unexpected_error.dart';
 import 'package:corona_spectator/src/ui/views/news_view/components/article_list.dart';
 import 'package:corona_spectator/src/ui/views/news_view/components/news_view_header.dart';
+import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class NewsView extends StatefulWidget {
@@ -56,11 +57,21 @@ class _NewsViewState extends State<NewsView> {
   }
 
   Widget _content(BuildContext context, List<Article> articles) {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(child: NewsViewHeader()),
-        ArticleList(articles),
-      ],
+    return EasyRefresh(
+      header: ClassicalHeader(
+        bgColor: CantonColors.bgSecondary!,
+        enableHapticFeedback: true,
+        float: false,
+      ),
+      onRefresh: () async {
+        return await context.refresh(articlesProvider);
+      },
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(child: NewsViewHeader()),
+          ArticleList(articles),
+        ],
+      ),
     );
   }
 }
