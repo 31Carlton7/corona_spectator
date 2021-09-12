@@ -17,10 +17,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
+
 class PreventionData {
   String title;
   String content;
-  String iconPath;
+  IconData iconPath;
 
   PreventionData({
     required this.title,
@@ -31,7 +33,7 @@ class PreventionData {
   PreventionData copyWith({
     String? title,
     String? content,
-    String? iconPath,
+    IconData? iconPath,
   }) {
     return PreventionData(
       title: title ?? this.title,
@@ -58,21 +60,16 @@ class PreventionData {
 
   String toJson() => json.encode(toMap());
 
-  factory PreventionData.fromJson(String source) =>
-      PreventionData.fromMap(json.decode(source));
+  factory PreventionData.fromJson(String source) => PreventionData.fromMap(json.decode(source));
 
   @override
-  String toString() =>
-      'PreventionData(title: $title, content: $content, iconPath: $iconPath)';
+  String toString() => 'PreventionData(title: $title, content: $content, iconPath: $iconPath)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is PreventionData &&
-        other.title == title &&
-        other.content == content &&
-        other.iconPath == iconPath;
+    return other is PreventionData && other.title == title && other.content == content && other.iconPath == iconPath;
   }
 
   @override
