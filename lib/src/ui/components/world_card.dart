@@ -83,8 +83,7 @@ class WorldCard extends StatelessWidget {
             ),
             CoronavirusPieChart(_chartData(context, data)),
             Text(
-              'Updated at ' +
-                  DateFormat('M/d/yy').format(data.lastUpdated!).toString(),
+              'Updated at ' + DateFormat('M/d/yy').format(data.lastUpdated!).toString(),
               style: Theme.of(context).textTheme.bodyText2?.copyWith(
                     color: Theme.of(context).colorScheme.secondaryVariant,
                   ),
