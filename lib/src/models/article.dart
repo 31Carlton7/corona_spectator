@@ -20,14 +20,12 @@ import 'dart:convert';
 class Article {
   String? title;
   String? link;
-  String? image;
   String? source;
   String? description;
 
   Article({
     this.title,
     this.link,
-    this.image,
     this.source,
     this.description,
   });
@@ -35,14 +33,12 @@ class Article {
   Article copyWith({
     String? title,
     String? link,
-    String? image,
     String? source,
     String? description,
   }) {
     return Article(
       title: title ?? this.title,
       link: link ?? this.link,
-      image: image ?? this.image,
       source: source ?? this.source,
       description: description ?? this.description,
     );
@@ -52,7 +48,6 @@ class Article {
     return {
       'title': title,
       'link': link,
-      'image': image,
       'source': source,
       'description': description,
     };
@@ -62,7 +57,6 @@ class Article {
     return Article(
       title: map['title'],
       link: map['link'],
-      image: map['image'],
       source: map['source'],
       description: map['description'],
     );
@@ -70,12 +64,11 @@ class Article {
 
   String toJson() => json.encode(toMap());
 
-  factory Article.fromJson(String source) =>
-      Article.fromMap(json.decode(source));
+  factory Article.fromJson(String source) => Article.fromMap(json.decode(source));
 
   @override
   String toString() {
-    return 'Article(title: $title, link: $link, image: $image, source: $source, description: $description)';
+    return 'Article(title: $title, link: $link, source: $source, description: $description)';
   }
 
   @override
@@ -85,17 +78,12 @@ class Article {
     return other is Article &&
         other.title == title &&
         other.link == link &&
-        other.image == image &&
         other.source == source &&
         other.description == description;
   }
 
   @override
   int get hashCode {
-    return title.hashCode ^
-        link.hashCode ^
-        image.hashCode ^
-        source.hashCode ^
-        description.hashCode;
+    return title.hashCode ^ link.hashCode ^ source.hashCode ^ description.hashCode;
   }
 }
