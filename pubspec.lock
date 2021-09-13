@@ -104,8 +104,8 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: a4c0f8a89f83f31fb7d638655b105d984a9dc060
-      url: "git://github.com/31Carlton7/canton_design_system.git"
+      resolved-ref: b54eb8acaf8ffa898ab2eb2c0174060be862777a
+      url: "https://github.com/31Carlton7/canton_design_system.git"
     source: git
     version: "0.0.1"
   characters:
@@ -220,6 +220,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.2"
+  figma_squircle:
+    dependency: "direct main"
+    description:
+      name: figma_squircle
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.2"
   file:
     dependency: transitive
     description:
