@@ -19,7 +19,7 @@ import 'package:canton_design_system/canton_design_system.dart';
 import 'package:corona_spectator/src/config/bottom_navigation_bar.dart';
 import 'package:corona_spectator/src/providers/country_repository_provider.dart';
 import 'package:corona_spectator/src/providers/state_repository_provider.dart';
-import 'package:corona_spectator/src/ui/views/home_view.dart/home_view.dart';
+import 'package:corona_spectator/src/ui/views/statistics_view/statistics_view.dart';
 import 'package:corona_spectator/src/ui/views/information_view/information_view.dart';
 import 'package:corona_spectator/src/ui/views/news_view/news_view.dart';
 import 'package:flutter/cupertino.dart';
@@ -55,7 +55,7 @@ class _CurrentViewState extends State<CurrentView> {
     return Consumer(
       builder: (context, watch, child) {
         final List<Widget> _views = [
-          HomeView(),
+          StatisticsView(),
           NewsView(),
           InformationView(),
         ];
