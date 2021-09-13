@@ -22,7 +22,7 @@ import 'package:corona_spectator/src/providers/country_data_provider.dart';
 import 'package:corona_spectator/src/providers/country_repository_provider.dart';
 import 'package:corona_spectator/src/ui/components/error_body.dart';
 import 'package:corona_spectator/src/ui/components/unexpected_error.dart';
-import 'package:corona_spectator/src/ui/views/home_view.dart/components/search_bar.dart';
+import 'package:corona_spectator/src/ui/components/search_bar.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -38,8 +38,7 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
           Navigator.pop(context);
         },
         child: ListTile(
-          contentPadding:
-              const EdgeInsets.symmetric(vertical: 3, horizontal: 17),
+          contentPadding: const EdgeInsets.symmetric(vertical: 3, horizontal: 17),
           title: Text(
             data.name!,
             style: Theme.of(context).textTheme.headline6,
@@ -75,8 +74,7 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
-                    padding:
-                        const EdgeInsets.only(top: 15, left: 27, right: 27),
+                    padding: const EdgeInsets.only(top: 15, left: 27, right: 27),
                     child: Container(
                       height: 5,
                       width: 50,
@@ -87,8 +85,7 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 27),
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 27),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -97,12 +94,9 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
                           },
                           child: Text(
                             'Cancel',
-                            style:
-                                Theme.of(context).textTheme.headline6?.copyWith(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryVariant,
-                                    ),
+                            style: Theme.of(context).textTheme.headline6?.copyWith(
+                                  color: Theme.of(context).colorScheme.secondaryVariant,
+                                ),
                           ),
                         ),
                         Spacer(flex: 6),
@@ -125,8 +119,7 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
                           return repo.when(
                             error: (e, s) {
                               if (e is DioError) {
-                                return ErrorBody(
-                                    e.message, allCountryDataProvider);
+                                return ErrorBody(e.message, allCountryDataProvider);
                               }
                               return UnexpectedError(allCountryDataProvider);
                             },
@@ -137,17 +130,11 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
                                 (a, b) => a.name!.compareTo(b.name!),
                               );
                               List<CountryData> countries =
-                                  filteredCountries.isNotEmpty
-                                      ? filteredCountries
-                                      : sortedCountries;
+                                  filteredCountries.isNotEmpty ? filteredCountries : sortedCountries;
 
                               void _searchCountries(String query) {
-                                final newCountryList =
-                                    sortedCountries.where((country) {
-                                  return country
-                                      .toString()
-                                      .toLowerCase()
-                                      .contains(query.toLowerCase());
+                                final newCountryList = sortedCountries.where((country) {
+                                  return country.toString().toLowerCase().contains(query.toLowerCase());
                                 }).toList();
 
                                 setState(() {
@@ -163,8 +150,7 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
                                   itemBuilder: (context, index) {
                                     return Column(
                                       children: [
-                                        if (index == 0)
-                                          SearchBar(_searchCountries),
+                                        if (index == 0) SearchBar(_searchCountries),
                                         _countrySelectionCard(countries[index]),
                                         Divider(),
                                       ],
