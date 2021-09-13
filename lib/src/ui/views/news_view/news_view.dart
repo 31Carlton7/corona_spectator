@@ -59,7 +59,9 @@ class _NewsViewState extends State<NewsView> {
   Widget _content(BuildContext context, List<Article> articles) {
     return EasyRefresh(
       header: ClassicalHeader(
-        bgColor: CantonColors.bgSecondary!,
+        bgColor: Theme.of(context).primaryColor,
+        textColor: CantonColors.white,
+        infoColor: CantonColors.white,
         enableHapticFeedback: true,
         float: false,
       ),
