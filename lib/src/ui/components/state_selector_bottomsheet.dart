@@ -22,7 +22,7 @@ import 'package:corona_spectator/src/providers/state_data_provider.dart';
 import 'package:corona_spectator/src/providers/state_repository_provider.dart';
 import 'package:corona_spectator/src/ui/components/error_body.dart';
 import 'package:corona_spectator/src/ui/components/unexpected_error.dart';
-import 'package:corona_spectator/src/ui/views/home_view.dart/components/search_bar.dart';
+import 'package:corona_spectator/src/ui/components/search_bar.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -39,8 +39,7 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
             Navigator.pop(context);
           },
           child: ListTile(
-            contentPadding:
-                const EdgeInsets.symmetric(vertical: 3, horizontal: 17),
+            contentPadding: const EdgeInsets.symmetric(vertical: 3, horizontal: 17),
             title: Text(
               data.name!,
               style: Theme.of(context).textTheme.headline6,
@@ -77,8 +76,7 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
-                    padding:
-                        const EdgeInsets.only(top: 15, left: 27, right: 27),
+                    padding: const EdgeInsets.only(top: 15, left: 27, right: 27),
                     child: Container(
                       height: 5,
                       width: 50,
@@ -89,8 +87,7 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10, horizontal: 27),
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 27),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -99,12 +96,9 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
                           },
                           child: Text(
                             'Cancel',
-                            style:
-                                Theme.of(context).textTheme.headline6?.copyWith(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryVariant,
-                                    ),
+                            style: Theme.of(context).textTheme.headline6?.copyWith(
+                                  color: Theme.of(context).colorScheme.secondaryVariant,
+                                ),
                           ),
                         ),
                         Spacer(flex: 6),
@@ -127,25 +121,19 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
                           return repo.when(
                             error: (e, s) {
                               if (e is DioError) {
-                                return ErrorBody(
-                                    e.message, allStateDataProvider);
+                                return ErrorBody(e.message, allStateDataProvider);
                               }
                               return UnexpectedError(allStateDataProvider);
                             },
                             loading: () => Expanded(child: Loading()),
                             data: (data) {
-                              List<StateData> states = filteredStates.isNotEmpty
-                                  ? filteredStates
-                                  : data;
+                              List<StateData> states = filteredStates.isNotEmpty ? filteredStates : data;
 
                               states.sort((a, b) => a.name!.compareTo(b.name!));
 
                               void _searchStates(String query) {
                                 final newStateList = data.where((state) {
-                                  return state
-                                      .toString()
-                                      .toLowerCase()
-                                      .contains(query.toLowerCase());
+                                  return state.toString().toLowerCase().contains(query.toLowerCase());
                                 }).toList();
 
                                 setState(() {
@@ -161,8 +149,7 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
                                   itemBuilder: (context, index) {
                                     return Column(
                                       children: [
-                                        if (index == 0)
-                                          SearchBar(_searchStates),
+                                        if (index == 0) SearchBar(_searchStates),
                                         _stateSelectionCard(states[index]),
                                         Divider(),
                                       ],
