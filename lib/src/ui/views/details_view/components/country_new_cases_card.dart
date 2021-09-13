@@ -27,7 +27,7 @@ class CountryNewCasesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 17),
+      margin: const EdgeInsets.symmetric(horizontal: 17, vertical: 5),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
         child: Column(
