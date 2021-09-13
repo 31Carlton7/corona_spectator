@@ -17,6 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import 'package:canton_design_system/canton_design_system.dart';
 import 'package:corona_spectator/src/models/country_data.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 
 class CountryDetailsCard extends StatelessWidget {
   const CountryDetailsCard(this.data, this.worldRanking);
@@ -87,7 +88,7 @@ class CountryDetailsCard extends StatelessWidget {
 
   Widget _recoveredCard(BuildContext context) {
     return Card(
-      shape: SquircleBorder(radius: BorderRadius.zero),
+      shape: SmoothRectangleBorder(borderRadius: SmoothBorderRadius.zero),
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 17,
@@ -121,7 +122,7 @@ class CountryDetailsCard extends StatelessWidget {
 
   Widget _activeCard(BuildContext context) {
     return Card(
-      shape: SquircleBorder(radius: BorderRadius.zero),
+      shape: SmoothRectangleBorder(borderRadius: SmoothBorderRadius.zero),
       child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 17,
