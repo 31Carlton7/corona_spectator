@@ -19,6 +19,7 @@ import 'dart:convert';
 
 import 'package:canton_design_system/canton_design_system.dart';
 import 'package:dio/dio.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:xml2json/xml2json.dart';
 
 import 'package:corona_spectator/src/config/exceptions.dart';
@@ -49,26 +50,19 @@ class NewsService {
 
       var data = results.map((article) {
         return Article.fromMap(article).copyWith(
-          image: '',
           description: CantonMethods.removeAllHtmlTags(
             article['description'],
           ),
         );
       }).toList(growable: false);
 
-      // List<Article> newArticleList = [];
-
-      // for (var item in data) {
-      //   var newItem = item;
-      //   final previewData = await getPreviewData(newItem.link!);
-
-      //   newItem.image = previewData.image!.url;
-
-      //   newArticleList.add(newItem);
-      // }
-
       return data;
     } on DioError catch (e) {
+      await FirebaseCrashlytics.instance.recordError(
+        e,
+        e.stackTrace,
+      );
+
       throw Exceptions.fromDioError(e);
     }
   }
