@@ -16,6 +16,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 import 'package:dio/dio.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:intl/intl.dart';
 
 import 'package:corona_spectator/src/config/exceptions.dart';
@@ -42,6 +43,11 @@ class StatisticsService {
 
       return data;
     } on DioError catch (e) {
+      await FirebaseCrashlytics.instance.recordError(
+        e,
+        e.stackTrace,
+      );
+
       throw Exceptions.fromDioError(e);
     }
   }
@@ -113,6 +119,11 @@ class StatisticsService {
 
       return data;
     } on DioError catch (e) {
+      await FirebaseCrashlytics.instance.recordError(
+        e,
+        e.stackTrace,
+      );
+
       throw Exceptions.fromDioError(e);
     }
   }
@@ -123,12 +134,15 @@ class StatisticsService {
 
       final results = List<Map<String, dynamic>>.from(response.data);
 
-      final data = results
-          .map((country) => CountryData.fromMapWithBaseInfo(country))
-          .toList(growable: false);
+      final data = results.map((country) => CountryData.fromMapWithBaseInfo(country)).toList(growable: false);
 
       return data;
     } on DioError catch (e) {
+      await FirebaseCrashlytics.instance.recordError(
+        e,
+        e.stackTrace,
+      );
+
       throw Exceptions.fromDioError(e);
     }
   }
@@ -143,6 +157,11 @@ class StatisticsService {
 
       return data;
     } on DioError catch (e) {
+      await FirebaseCrashlytics.instance.recordError(
+        e,
+        e.stackTrace,
+      );
+
       throw Exceptions.fromDioError(e);
     }
   }
@@ -153,12 +172,15 @@ class StatisticsService {
 
       final results = List<Map<String, dynamic>>.from(response.data);
 
-      final data = results
-          .map((state) => StateData.fromMap(state))
-          .toList(growable: false);
+      final data = results.map((state) => StateData.fromMap(state)).toList(growable: false);
 
       return data;
     } on DioError catch (e) {
+      await FirebaseCrashlytics.instance.recordError(
+        e,
+        e.stackTrace,
+      );
+
       throw Exceptions.fromDioError(e);
     }
   }
