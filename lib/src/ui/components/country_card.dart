@@ -20,6 +20,7 @@ import 'package:corona_spectator/src/models/country_data.dart';
 import 'package:corona_spectator/src/ui/components/country_name_text.dart';
 import 'package:corona_spectator/src/ui/components/country_selector_bottomsheet.dart';
 import 'package:corona_spectator/src/ui/views/details_view/details_view.dart';
+import 'package:figma_squircle/figma_squircle.dart';
 import 'package:intl/intl.dart';
 
 class CountryCard extends StatelessWidget {
@@ -155,108 +156,134 @@ class CountryCard extends StatelessWidget {
                           color: Theme.of(context).colorScheme.secondaryVariant,
                         ),
                   ),
+                  const SizedBox(height: 10),
                 ],
               ),
               data.casesByDate!.isNotEmpty
-                  ? Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Card(
-                          margin: const EdgeInsets.symmetric(vertical: 15),
-                          color: Theme.of(context).colorScheme.onSecondary,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 40,
+                  ? IntrinsicHeight(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Card(
+                            margin: const EdgeInsets.symmetric(vertical: 15),
+                            shape: SmoothRectangleBorder(
+                              borderRadius: SmoothBorderRadius.all(
+                                SmoothRadius(cornerRadius: 15, cornerSmoothing: 1),
+                              ),
                             ),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Recovered',
-                                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                                        color: Theme.of(context).colorScheme.secondaryVariant,
-                                      ),
-                                ),
-                                Text(
-                                  CantonMethods.separateNumberByThreeDigits(source: data.totalRecovered!),
-                                  style: Theme.of(context).textTheme.headline5?.copyWith(
-                                        fontSize: 16,
-                                        color: Theme.of(context).colorScheme.background,
-                                      ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Card(
-                          margin: const EdgeInsets.symmetric(vertical: 15),
-                          color: Theme.of(context).colorScheme.onSecondary,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 30,
-                            ),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Active Cases',
-                                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                                        color: Theme.of(context).colorScheme.secondaryVariant,
-                                      ),
-                                ),
-                                Text(
-                                  CantonMethods.separateNumberByThreeDigits(source: data.activeCases!),
-                                  style: Theme.of(context).textTheme.headline5?.copyWith(
-                                        fontSize: 16,
-                                        color: Theme.of(context).colorScheme.surface,
-                                      ),
-                                ),
-                                Text(
-                                  '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!),
-                                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                                        color: Theme.of(context).colorScheme.surface,
-                                      ),
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 40,
+                              ),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'Recovered',
+                                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                                          color: Theme.of(context).colorScheme.secondaryVariant,
+                                        ),
+                                  ),
+                                  Text(
+                                    CantonMethods.separateNumberByThreeDigits(source: data.totalRecovered!),
+                                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                                          fontSize: 16,
+                                          color: Theme.of(context).colorScheme.background,
+                                        ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        Card(
-                          margin: const EdgeInsets.symmetric(vertical: 15),
-                          color: Theme.of(context).colorScheme.onSecondary,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 30,
+                          VerticalDivider(
+                            thickness: 1,
+                            width: 10,
+                            color: Theme.of(context).dividerColor,
+                          ),
+                          Card(
+                            margin: const EdgeInsets.symmetric(vertical: 15),
+                            shape: SmoothRectangleBorder(
+                              borderRadius: SmoothBorderRadius.all(
+                                SmoothRadius(cornerRadius: 15, cornerSmoothing: 1),
+                              ),
                             ),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Deaths',
-                                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                                        color: Theme.of(context).colorScheme.secondaryVariant,
-                                      ),
-                                ),
-                                Text(
-                                  CantonMethods.separateNumberByThreeDigits(source: data.totalDeaths!),
-                                  style: Theme.of(context).textTheme.headline5?.copyWith(
-                                        fontSize: 16,
-                                        color: Theme.of(context).colorScheme.error,
-                                      ),
-                                ),
-                                Text(
-                                  '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysDeaths!),
-                                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                                        color: Theme.of(context).colorScheme.error,
-                                      ),
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 30,
+                              ),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'Active Cases',
+                                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                                          color: Theme.of(context).colorScheme.secondaryVariant,
+                                        ),
+                                  ),
+                                  Text(
+                                    CantonMethods.separateNumberByThreeDigits(source: data.activeCases!),
+                                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                                          fontSize: 16,
+                                          color: Theme.of(context).colorScheme.surface,
+                                        ),
+                                  ),
+                                  Text(
+                                    '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!),
+                                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                                          color: Theme.of(context).colorScheme.surface,
+                                        ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                          VerticalDivider(
+                            thickness: 1,
+                            width: 10,
+                            color: Theme.of(context).dividerColor,
+                          ),
+                          Card(
+                            margin: const EdgeInsets.symmetric(vertical: 15),
+                            shape: SmoothRectangleBorder(
+                              borderRadius: SmoothBorderRadius.all(
+                                SmoothRadius(cornerRadius: 15, cornerSmoothing: 1),
+                              ),
+                            ),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 30,
+                              ),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'Deaths',
+                                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                                          color: Theme.of(context).colorScheme.secondaryVariant,
+                                        ),
+                                  ),
+                                  Text(
+                                    CantonMethods.separateNumberByThreeDigits(source: data.totalDeaths!),
+                                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                                          fontSize: 16,
+                                          color: Theme.of(context).colorScheme.error,
+                                        ),
+                                  ),
+                                  Text(
+                                    '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysDeaths!),
+                                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                                          color: Theme.of(context).colorScheme.error,
+                                        ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     )
                   : Container(),
+              const SizedBox(height: 10),
               Text(
                 'Updated at ' + DateFormat('M/d/yy').format(data.lastUpdated!).toString(),
                 style: Theme.of(context).textTheme.bodyText2?.copyWith(
