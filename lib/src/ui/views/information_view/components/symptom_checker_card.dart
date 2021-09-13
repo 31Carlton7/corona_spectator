@@ -16,6 +16,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 import 'package:canton_design_system/canton_design_system.dart';
+import 'package:figma_squircle/figma_squircle.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SymptomCheckerCard extends StatelessWidget {
@@ -33,6 +35,19 @@ class SymptomCheckerCard extends StatelessWidget {
         }
       },
       child: Card(
+        margin: const EdgeInsets.symmetric(horizontal: 2),
+        shape: SmoothRectangleBorder(
+          side: BorderSide(
+            color: Theme.of(context).dividerColor,
+            width: 1.5,
+          ),
+          borderRadius: SmoothBorderRadius.all(
+            SmoothRadius(
+              cornerRadius: 15,
+              cornerSmoothing: 1,
+            ),
+          ),
+        ),
         child: Container(
           padding: const EdgeInsets.only(
             left: 12,
@@ -54,8 +69,8 @@ class SymptomCheckerCard extends StatelessWidget {
                     padding: EdgeInsets.zero,
                     alignment: MainAxisAlignment.end,
                     icon: Icon(
-                      Iconsax.arrow_right_2,
-                      size: 20,
+                      FontAwesomeIcons.externalLinkAlt,
+                      size: 14,
                       color: Theme.of(context).primaryColor,
                     ),
                     onPressed: () async {
