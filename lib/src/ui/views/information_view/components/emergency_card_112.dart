@@ -37,7 +37,7 @@ class EmergencyCard112 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'General',
+                'Europe',
                 style: Theme.of(context).textTheme.headline6?.copyWith(
                       color: Theme.of(context).colorScheme.secondaryVariant,
                     ),
