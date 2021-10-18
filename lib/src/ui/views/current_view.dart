@@ -77,15 +77,6 @@ class _CurrentViewState extends State<CurrentView> {
           InformationView(),
         ];
 
-        Color _canvasColor() {
-          if (_currentIndex != 1) return Theme.of(context).canvasColor;
-
-          if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-            return Theme.of(context).canvasColor;
-          }
-          return Theme.of(context).backgroundColor;
-        }
-
         return CantonScaffold(
           padding: EdgeInsets.zero,
           bottomNavBar: BottomNavBar(_currentIndex, _onTabTapped),
