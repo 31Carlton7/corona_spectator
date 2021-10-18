@@ -142,7 +142,9 @@ class CountryDetailsCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 7),
                 Text(
-                  CantonMethods.separateNumberByThreeDigits(source: data.activeCases!),
+                  (data.activeCases != 0)
+                      ? CantonMethods.separateNumberByThreeDigits(source: data.activeCases!)
+                      : 'N/A',
                   style: Theme.of(context).textTheme.headline4?.copyWith(
                         fontWeight: FontWeight.w500,
                       ),
