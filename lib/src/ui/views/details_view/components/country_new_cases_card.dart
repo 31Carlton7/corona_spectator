@@ -58,7 +58,9 @@ class CountryNewCasesCard extends StatelessWidget {
             const SizedBox(height: 10),
             Text.rich(
               TextSpan(
-                text: '+${CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!)} ',
+                text: (data.todaysCases != 0)
+                    ? '+${CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!)} '
+                    : 'N/A ',
                 children: [
                   TextSpan(
                     text: 'New cases',
