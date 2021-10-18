@@ -113,7 +113,9 @@ class StateCard extends StatelessWidget {
                                   ),
                             ),
                             Text(
-                              CantonMethods.separateNumberByThreeDigits(source: data.activeCases!),
+                              (data.activeCases != 0)
+                                  ? CantonMethods.separateNumberByThreeDigits(source: data.activeCases!)
+                                  : 'N/A',
                               style: Theme.of(context).textTheme.headline5?.copyWith(
                                     color: Theme.of(context).colorScheme.surface,
                                   ),
@@ -149,7 +151,9 @@ class StateCard extends StatelessWidget {
                                   ),
                             ),
                             Text(
-                              CantonMethods.separateNumberByThreeDigits(source: data.totalDeaths!),
+                              (data.totalDeaths != 0)
+                                  ? CantonMethods.separateNumberByThreeDigits(source: data.totalDeaths!)
+                                  : 'N/A',
                               style: Theme.of(context).textTheme.headline5?.copyWith(
                                     color: Theme.of(context).colorScheme.error,
                                   ),
