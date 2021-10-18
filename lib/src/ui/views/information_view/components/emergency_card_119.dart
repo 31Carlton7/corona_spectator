@@ -17,7 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 import 'package:canton_design_system/canton_design_system.dart';
-import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class EmergencyCard119 extends StatelessWidget {
   const EmergencyCard119({Key? key}) : super(key: key);
@@ -26,7 +26,12 @@ class EmergencyCard119 extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        await FlutterPhoneDirectCaller.callNumber('119');
+        String url = "tel:119";
+        if (await canLaunch(url)) {
+          await launch(url);
+        } else {
+          throw 'Could not launch $url';
+        }
       },
       child: Card(
         shape: SquircleBorder(
