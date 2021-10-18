@@ -23,8 +23,14 @@ import 'package:corona_spectator/src/providers/state_repository_provider.dart';
 import 'package:corona_spectator/src/ui/views/statistics_view/statistics_view.dart';
 import 'package:corona_spectator/src/ui/views/information_view/information_view.dart';
 import 'package:corona_spectator/src/ui/views/news_view/news_view.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final _statisticsNavigatorKey = GlobalKey<NavigatorState>();
+final _newsNavigatorKey = GlobalKey<NavigatorState>();
+final _informationNavigatorKey = GlobalKey<NavigatorState>();
 
 class CurrentView extends StatefulWidget {
   @override
@@ -41,6 +47,16 @@ class _CurrentViewState extends State<CurrentView> {
   }
 
   void _onTabTapped(int index) {
+    if (index == _currentIndex && _currentIndex == 0 && _statisticsNavigatorKey.currentState!.canPop()) {
+      _statisticsNavigatorKey.currentState!.pop();
+    }
+    if (index == _currentIndex && _currentIndex == 1 && _newsNavigatorKey.currentState!.canPop()) {
+      _newsNavigatorKey.currentState!.pop();
+    }
+    if (index == _currentIndex && _currentIndex == 2 && _informationNavigatorKey.currentState!.canPop()) {
+      _informationNavigatorKey.currentState!.pop();
+    }
+
     setState(() {
       _currentIndex = index;
     });
@@ -71,10 +87,53 @@ class _CurrentViewState extends State<CurrentView> {
         }
 
         return CantonScaffold(
-          padding: ([0, 1].contains(_currentIndex)) ? EdgeInsets.zero : null,
+          padding: EdgeInsets.zero,
           bottomNavBar: BottomNavBar(_currentIndex, _onTabTapped),
-          backgroundColor: _canvasColor(),
-          body: _views[_currentIndex],
+          safeArea: false,
+          backgroundColor: CantonMethods.alternateCanvasColor(context, index: _currentIndex, targetIndexes: [1]),
+          body: IndexedStack(
+            index: _currentIndex,
+            children: [
+              Navigator(
+                key: _statisticsNavigatorKey,
+                observers: [FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())],
+                onGenerateRoute: (settings) {
+                  return MaterialPageRoute(
+                    settings: settings,
+                    fullscreenDialog: true,
+                    builder: (context) => SafeArea(child: _views[_currentIndex]),
+                  );
+                },
+              ),
+              Navigator(
+                key: _newsNavigatorKey,
+                observers: [FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())],
+                onGenerateRoute: (settings) {
+                  return MaterialPageRoute(
+                    settings: settings,
+                    fullscreenDialog: true,
+                    builder: (context) => SafeArea(child: _views[_currentIndex]),
+                  );
+                },
+              ),
+              Navigator(
+                key: _informationNavigatorKey,
+                observers: [FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())],
+                onGenerateRoute: (settings) {
+                  return MaterialPageRoute(
+                    settings: settings,
+                    fullscreenDialog: true,
+                    builder: (context) => SafeArea(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 17),
+                        child: _views[_currentIndex],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
         );
       },
     );
