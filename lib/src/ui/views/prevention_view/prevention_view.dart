@@ -52,6 +52,7 @@ class PreventionView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Column(
             children: [
+              if (index == 0) const SizedBox(height: 1),
               PreventionCard(
                 title: items[index].title,
                 content: items[index].content,
