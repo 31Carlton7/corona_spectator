@@ -32,6 +32,7 @@ class PreventionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Divider(),
         Container(
