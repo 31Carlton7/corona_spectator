@@ -111,6 +111,7 @@ class _DetailsViewState extends State<DetailsView> {
           if (countryData.name == 'USA') StateCard(stateData),
           if (countryData.name == 'USA') const SizedBox(height: 15),
           CountryDetailsCard(countryData, worldRanking),
+          const SizedBox(height: 25),
         ],
       ),
     );
