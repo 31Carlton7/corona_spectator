@@ -62,18 +62,18 @@ class _StatisticsViewState extends State<StatisticsView> {
             return countryDataRepo.when(
               error: (e, s) {
                 if (e is DioError) {
-                  return ErrorBody(e.message, worldDataProvider);
+                  return ErrorBody(e.message, countryDataProvider);
                 }
-                return UnexpectedError(worldDataProvider);
+                return UnexpectedError(countryDataProvider);
               },
               loading: () => Loading(),
               data: (countryData) {
                 return stateDataRepo.when(
                   error: (e, s) {
                     if (e is DioError) {
-                      return ErrorBody(e.message, worldDataProvider);
+                      return ErrorBody(e.message, stateDataProvider);
                     }
-                    return UnexpectedError(worldDataProvider);
+                    return UnexpectedError(stateDataProvider);
                   },
                   loading: () => Loading(),
                   data: (stateData) {
@@ -90,6 +90,7 @@ class _StatisticsViewState extends State<StatisticsView> {
 
   Widget _content(BuildContext context, WorldData worldData, CountryData countryData, StateData stateData) {
     var currentlySelectedCountry = context.read(countryRepositoryProvider).getCountry;
+
     Future<void> refresh() async {
       await context.refresh(worldDataProvider);
       await context.refresh(countryDataProvider);
