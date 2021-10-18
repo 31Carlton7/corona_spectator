@@ -22,6 +22,7 @@ import 'package:corona_spectator/src/ui/views/information_view/components/emerge
 import 'package:corona_spectator/src/ui/views/information_view/components/emergency_card_119.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/emergency_card_911.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/information_view_header.dart';
+import 'package:corona_spectator/src/ui/views/information_view/components/nearest_support_locations_card.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/prevention_card.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/symptom_checker_card.dart';
 import 'package:corona_spectator/src/ui/views/information_view/components/symptoms_card.dart';
@@ -39,7 +40,7 @@ class InformationView extends StatelessWidget {
     return ListView(
       children: [
         InformationViewHeader(),
-        _symptomCheckerSection(context),
+        _topSection(context),
         _healthTipsSection(context),
         _emergencyContactsSection(context),
         _usefulLinksSection(context),
@@ -106,10 +107,16 @@ class InformationView extends StatelessWidget {
     );
   }
 
-  Widget _symptomCheckerSection(BuildContext context) {
+  Widget _topSection(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 12),
-      child: SymptomCheckerCard(),
+      child: Column(
+        children: [
+          SymptomCheckerCard(),
+          const SizedBox(height: 10),
+          NearestSupportLocationsCard(),
+        ],
+      ),
     );
   }
 }
