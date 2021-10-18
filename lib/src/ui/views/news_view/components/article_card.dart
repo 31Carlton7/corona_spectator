@@ -36,39 +36,27 @@ class ArticleCard extends StatelessWidget {
           throw 'Could not launch ${article.link!}';
         }
       },
-      child: Card(
-        shape: const SquircleBorder(radius: BorderRadius.zero),
-        margin: const EdgeInsets.symmetric(vertical: 0),
-        color: CantonColors.transparent,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 21, vertical: 12),
-          child: Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width - 64,
-                      child: Text(
-                        article.title!.substring(0, article.title!.indexOf(' - ')),
-                        style: Theme.of(context).textTheme.headline5?.copyWith(
-                              fontWeight: FontWeight.w500,
-                            ),
-                      ),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 21, vertical: 12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width - 55,
+              child: Text(
+                article.title!.substring(0, article.title!.indexOf(' - ')),
+                style: Theme.of(context).textTheme.headline5?.copyWith(
+                      fontWeight: FontWeight.w500,
                     ),
-                    const SizedBox(height: 7),
-                    Text(
-                      article.source!,
-                      style: Theme.of(context).textTheme.bodyText1?.copyWith(color: Theme.of(context).primaryColor),
-                    ),
-                  ],
-                ),
               ),
-            ],
-          ),
+            ),
+            const SizedBox(height: 7),
+            Text(
+              article.source!,
+              style: Theme.of(context).textTheme.bodyText1?.copyWith(color: Theme.of(context).primaryColor),
+            ),
+          ],
         ),
       ),
     );
