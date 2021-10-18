@@ -23,20 +23,13 @@ import 'package:corona_spectator/src/providers/symptom_data_provider.dart';
 import 'package:corona_spectator/src/ui/views/symptoms_view/components/symptoms_view_header.dart';
 
 class SymptomsView extends StatelessWidget {
-  const SymptomsView({Key? key}) : super(key: key);
+  const SymptomsView();
 
   @override
   Widget build(BuildContext context) {
-    Color _canvasColor() {
-      if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-        return Theme.of(context).canvasColor;
-      }
-      return Theme.of(context).backgroundColor;
-    }
-
     return CantonScaffold(
       padding: EdgeInsets.zero,
-      backgroundColor: _canvasColor(),
+      backgroundColor: CantonMethods.alternateCanvasColor(context),
       body: _content(context),
     );
   }
