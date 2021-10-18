@@ -139,10 +139,12 @@ class CountryCard extends StatelessWidget {
                               ),
                         ),
                         TextSpan(
-                          text: ' +' +
-                              CantonMethods.separateNumberByThreeDigits(
-                                source: data.todaysCases!,
-                              ),
+                          text: (data.todaysCases != 0)
+                              ? ' +' +
+                                  CantonMethods.separateNumberByThreeDigits(
+                                    source: data.todaysCases!,
+                                  )
+                              : '',
                           style: Theme.of(context).textTheme.headline6?.copyWith(
                                 color: Theme.of(context).primaryColor,
                               ),
@@ -174,7 +176,7 @@ class CountryCard extends StatelessWidget {
                             ),
                             child: Container(
                               padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
+                                horizontal: 6,
                                 vertical: 40,
                               ),
                               child: Column(
@@ -187,7 +189,7 @@ class CountryCard extends StatelessWidget {
                                   ),
                                   Text(
                                     CantonMethods.separateNumberByThreeDigits(source: data.totalRecovered!),
-                                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                                    style: Theme.of(context).textTheme.headline6?.copyWith(
                                           fontSize: 16,
                                           color: Theme.of(context).colorScheme.background,
                                         ),
@@ -210,7 +212,7 @@ class CountryCard extends StatelessWidget {
                             ),
                             child: Container(
                               padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
+                                horizontal: 6,
                                 vertical: 30,
                               ),
                               child: Column(
@@ -223,13 +225,15 @@ class CountryCard extends StatelessWidget {
                                   ),
                                   Text(
                                     CantonMethods.separateNumberByThreeDigits(source: data.activeCases!),
-                                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                                    style: Theme.of(context).textTheme.headline6?.copyWith(
                                           fontSize: 16,
                                           color: Theme.of(context).colorScheme.surface,
                                         ),
                                   ),
                                   Text(
-                                    '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!),
+                                    (data.todaysCases != 0)
+                                        ? '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!)
+                                        : '',
                                     style: Theme.of(context).textTheme.bodyText1?.copyWith(
                                           color: Theme.of(context).colorScheme.surface,
                                         ),
@@ -252,7 +256,7 @@ class CountryCard extends StatelessWidget {
                             ),
                             child: Container(
                               padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
+                                horizontal: 6,
                                 vertical: 30,
                               ),
                               child: Column(
@@ -265,13 +269,15 @@ class CountryCard extends StatelessWidget {
                                   ),
                                   Text(
                                     CantonMethods.separateNumberByThreeDigits(source: data.totalDeaths!),
-                                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                                    style: Theme.of(context).textTheme.headline6?.copyWith(
                                           fontSize: 16,
                                           color: Theme.of(context).colorScheme.error,
                                         ),
                                   ),
                                   Text(
-                                    '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysDeaths!),
+                                    (data.todaysDeaths != 0)
+                                        ? '+' + CantonMethods.separateNumberByThreeDigits(source: data.todaysDeaths!)
+                                        : '',
                                     style: Theme.of(context).textTheme.bodyText1?.copyWith(
                                           color: Theme.of(context).colorScheme.error,
                                         ),
