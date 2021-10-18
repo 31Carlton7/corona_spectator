@@ -27,16 +27,9 @@ class PreventionView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color _canvasColor() {
-      if (MediaQuery.of(context).platformBrightness == Brightness.dark) {
-        return Theme.of(context).canvasColor;
-      }
-      return Theme.of(context).backgroundColor;
-    }
-
     return CantonScaffold(
       padding: EdgeInsets.zero,
-      backgroundColor: _canvasColor(),
+      backgroundColor: CantonMethods.alternateCanvasColor(context),
       body: _content(context),
     );
   }
