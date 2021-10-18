@@ -1,4 +1,5 @@
 /*
+Corona Spectator
 Copyright (C) 2021  Carlton Aikins
 
 This program is free software: you can redistribute it and/or modify
@@ -56,8 +57,7 @@ class CoronavirusPieChart extends StatelessWidget {
                       seriesList.first.data[0].key,
                       style: Theme.of(context).textTheme.headline6?.copyWith(
                             height: 1,
-                            color:
-                                Theme.of(context).colorScheme.secondaryVariant,
+                            color: Theme.of(context).colorScheme.secondaryVariant,
                           ),
                     ),
                     Text(
@@ -93,8 +93,7 @@ class CoronavirusPieChart extends StatelessWidget {
                       seriesList.first.data[1].key,
                       style: Theme.of(context).textTheme.headline6?.copyWith(
                             height: 1,
-                            color:
-                                Theme.of(context).colorScheme.secondaryVariant,
+                            color: Theme.of(context).colorScheme.secondaryVariant,
                           ),
                     ),
                     Text(
@@ -130,8 +129,7 @@ class CoronavirusPieChart extends StatelessWidget {
                       seriesList.first.data[2].key,
                       style: Theme.of(context).textTheme.headline6?.copyWith(
                             height: 1,
-                            color:
-                                Theme.of(context).colorScheme.secondaryVariant,
+                            color: Theme.of(context).colorScheme.secondaryVariant,
                           ),
                     ),
                     Text(

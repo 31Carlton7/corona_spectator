@@ -1,4 +1,5 @@
 /*
+Corona Spectator
 Copyright (C) 2021  Carlton Aikins
 
 This program is free software: you can redistribute it and/or modify
@@ -112,8 +113,7 @@ class WorldData {
 
   String toJson() => json.encode(toMap());
 
-  factory WorldData.fromJson(String source) =>
-      WorldData.fromMap(json.decode(source));
+  factory WorldData.fromJson(String source) => WorldData.fromMap(json.decode(source));
 
   @override
   String toString() {

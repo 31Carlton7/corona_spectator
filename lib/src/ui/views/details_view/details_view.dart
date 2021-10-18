@@ -1,4 +1,5 @@
 /*
+Corona Spectator
 Copyright (C) 2021  Carlton Aikins
 
 This program is free software: you can redistribute it and/or modify
@@ -75,10 +76,7 @@ class _DetailsViewState extends State<DetailsView> {
                 countries.sort(
                   (a, b) => b.totalCases!.compareTo(a.totalCases!),
                 );
-                var worldRanking = (countries.indexWhere(
-                            (element) => element.name == countryData.name) +
-                        1)
-                    .toString();
+                var worldRanking = (countries.indexWhere((element) => element.name == countryData.name) + 1).toString();
                 return stateRepo.when(
                   error: (e, s) {
                     if (e is DioError) {
@@ -104,8 +102,7 @@ class _DetailsViewState extends State<DetailsView> {
     );
   }
 
-  Widget _body(BuildContext context, CountryData countryData,
-      StateData stateData, String worldRanking) {
+  Widget _body(BuildContext context, CountryData countryData, StateData stateData, String worldRanking) {
     return Expanded(
       child: ListView(
         children: [

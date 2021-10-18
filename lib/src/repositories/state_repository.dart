@@ -1,4 +1,5 @@
 /*
+Corona Spectator
 Copyright (C) 2021  Carlton Aikins
 
 This program is free software: you can redistribute it and/or modify
@@ -41,8 +42,7 @@ class StateRepository extends ChangeNotifier {
     // Delete data
     // box.delete('last_selected_state');
 
-    var lastSelectedState =
-        box.get('last_selected_state', defaultValue: 'New York');
+    var lastSelectedState = box.get('last_selected_state', defaultValue: 'New York');
 
     _state = lastSelectedState;
   }

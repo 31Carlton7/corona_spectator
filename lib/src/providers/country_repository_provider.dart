@@ -1,4 +1,5 @@
 /*
+Corona Spectator
 Copyright (C) 2021  Carlton Aikins
 
 This program is free software: you can redistribute it and/or modify
@@ -18,7 +19,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 import 'package:corona_spectator/src/repositories/country_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final countryRepositoryProvider =
-    ChangeNotifierProvider<CountryRepository>((ref) {
+final countryRepositoryProvider = ChangeNotifierProvider<CountryRepository>((ref) {
   return CountryRepository();
 });

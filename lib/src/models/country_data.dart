@@ -1,4 +1,5 @@
 /*
+Corona Spectator
 Copyright (C) 2021  Carlton Aikins
 
 This program is free software: you can redistribute it and/or modify
@@ -147,8 +148,7 @@ class CountryData {
 
   String toJson() => json.encode(toMap());
 
-  factory CountryData.fromJson(String source) =>
-      CountryData.fromMap(json.decode(source));
+  factory CountryData.fromJson(String source) => CountryData.fromMap(json.decode(source));
 
   @override
   String toString() {
