@@ -62,10 +62,9 @@ class WorldCard extends StatelessWidget {
                             ),
                       ),
                       TextSpan(
-                        text: ' +' +
-                            CantonMethods.separateNumberByThreeDigits(
-                              source: data.todaysCases!,
-                            ),
+                        text: (data.todaysCases != 0)
+                            ? ' +' + CantonMethods.separateNumberByThreeDigits(source: data.todaysCases!)
+                            : '',
                         style: Theme.of(context).textTheme.headline6?.copyWith(
                               color: Theme.of(context).primaryColor,
                             ),
