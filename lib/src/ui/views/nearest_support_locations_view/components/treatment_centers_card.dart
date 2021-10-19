@@ -9,7 +9,7 @@ class TreatmentCentersCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        await MapsLauncher.launchQuery('COVID-19 Treatment Center');
+        await MapsLauncher.launchQuery('COVID-19 Clinic');
       },
       child: Card(
         shape: SmoothRectangleBorder(
