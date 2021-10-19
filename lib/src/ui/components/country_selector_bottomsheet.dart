@@ -67,7 +67,7 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
               decoration: ShapeDecoration(
                 color: Theme.of(context).backgroundColor,
                 shape: SquircleBorder(
-                  radius: BorderRadius.circular(55),
+                  radius: BorderRadius.vertical(top: Radius.circular(55)),
                 ),
               ),
               child: Column(
