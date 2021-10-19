@@ -145,17 +145,23 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
                               }
 
                               return Expanded(
-                                child: ListView.builder(
-                                  itemCount: states.length,
-                                  itemBuilder: (context, index) {
-                                    return Column(
-                                      children: [
-                                        if (index == 0) SearchBar(_searchStates),
-                                        _stateSelectionCard(states[index]),
-                                        Divider(),
-                                      ],
-                                    );
+                                child: GestureDetector(
+                                  behavior: HitTestBehavior.opaque,
+                                  onPanDown: (_) {
+                                    FocusScope.of(context).requestFocus(FocusNode());
                                   },
+                                  child: ListView.builder(
+                                    itemCount: states.length,
+                                    itemBuilder: (context, index) {
+                                      return Column(
+                                        children: [
+                                          if (index == 0) SearchBar(_searchStates),
+                                          _stateSelectionCard(states[index]),
+                                          Divider(),
+                                        ],
+                                      );
+                                    },
+                                  ),
                                 ),
                               );
                             },

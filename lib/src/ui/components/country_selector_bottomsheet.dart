@@ -146,17 +146,23 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
                               }
 
                               return Expanded(
-                                child: ListView.builder(
-                                  itemCount: countries.length,
-                                  itemBuilder: (context, index) {
-                                    return Column(
-                                      children: [
-                                        if (index == 0) SearchBar(_searchCountries),
-                                        _countrySelectionCard(countries[index]),
-                                        Divider(),
-                                      ],
-                                    );
+                                child: GestureDetector(
+                                  behavior: HitTestBehavior.opaque,
+                                  onPanDown: (_) {
+                                    FocusScope.of(context).requestFocus(FocusNode());
                                   },
+                                  child: ListView.builder(
+                                    itemCount: countries.length,
+                                    itemBuilder: (context, index) {
+                                      return Column(
+                                        children: [
+                                          if (index == 0) SearchBar(_searchCountries),
+                                          _countrySelectionCard(countries[index]),
+                                          Divider(),
+                                        ],
+                                      );
+                                    },
+                                  ),
                                 ),
                               );
                             },
