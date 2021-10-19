@@ -51,14 +51,15 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
     );
   }
 
+  var filteredStates = <StateData>[];
+  var controller = TextEditingController();
+
   return showModalBottomSheet(
     context: context,
     isScrollControlled: true,
     elevation: 0,
     useRootNavigator: true,
     builder: (context) {
-      List<StateData> filteredStates = [];
-
       return GestureDetector(
         onTap: () => CantonMethods.defocusTextfield(context),
         child: FractionallySizedBox(
@@ -155,7 +156,7 @@ Future<void> showStateSelectorBottomSheet(BuildContext context) async {
                                     itemBuilder: (context, index) {
                                       return Column(
                                         children: [
-                                          if (index == 0) SearchBar(_searchStates),
+                                          if (index == 0) SearchBar(_searchStates, controller),
                                           _stateSelectionCard(states[index]),
                                           Divider(),
                                         ],
