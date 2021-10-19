@@ -49,14 +49,15 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
     });
   }
 
+  var filteredCountries = <CountryData>[];
+  var controller = TextEditingController();
+
   return showModalBottomSheet(
     context: context,
     isScrollControlled: true,
     elevation: 0,
     useRootNavigator: true,
     builder: (context) {
-      List<CountryData> filteredCountries = [];
-
       return GestureDetector(
         onTap: () => CantonMethods.defocusTextfield(context),
         child: FractionallySizedBox(
@@ -156,7 +157,7 @@ Future<void> showCountrySelectorBottomSheet(BuildContext context) async {
                                     itemBuilder: (context, index) {
                                       return Column(
                                         children: [
-                                          if (index == 0) SearchBar(_searchCountries),
+                                          if (index == 0) SearchBar(_searchCountries, controller),
                                           _countrySelectionCard(countries[index]),
                                           Divider(),
                                         ],
