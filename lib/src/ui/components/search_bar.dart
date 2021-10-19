@@ -20,9 +20,10 @@ import 'package:canton_design_system/canton_design_system.dart';
 import 'package:figma_squircle/figma_squircle.dart';
 
 class SearchBar extends StatelessWidget {
-  const SearchBar(this.search);
+  const SearchBar(this.search, this.controller);
 
   final void Function(String) search;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class SearchBar extends StatelessWidget {
             radius: SmoothBorderRadius.all(
               SmoothRadius(cornerRadius: 35, cornerSmoothing: 1),
             ),
-            controller: TextEditingController(),
+            controller: controller,
             onChanged: (query) {
               search(query);
             },
