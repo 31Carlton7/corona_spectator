@@ -9,7 +9,7 @@ class TestingFacilitiesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        await MapsLauncher.launchQuery('COVID-19 Testing Sites');
+        await MapsLauncher.launchQuery('COVID-19 Testing near me');
       },
       child: Card(
         shape: SquircleBorder(radius: BorderRadius.zero),
