@@ -6,7 +6,7 @@ Corona Spectator is a coronavirus statistics and news app that has real time glo
 
 [License](https://github.com/31Carlton7/corona_spectator/blob/master/LICENSE)
 
-[TestFlight & Google Play Beta](#TestFlight & Google Play Beta)
+[TestFlight & Google Play Beta](#testflight-&-google-play-beta)
 
 [Screenshots](#screenshots)
 
