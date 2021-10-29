@@ -6,7 +6,11 @@ Corona Spectator is a coronavirus statistics and news app that has real time glo
 
 [License](https://github.com/31Carlton7/corona_spectator/blob/master/LICENSE)
 
+[TestFlight & Google Play Beta](#testflight--google-play-beta)
+
 [Screenshots](#screenshots)
+
+[Video](https://streamable.com/ucf84s)
 
 ## About
 
@@ -36,6 +40,14 @@ Assuming Flutter is installed and setup on your device (If not, follow the steps
 ```
 flutter run
 ```
+
+## TestFlight & Google Play Beta
+
+If you would like to use the app via TestFlight or Google Play Beta, you can download the apps with the following links below:
+
+TestFlight: https://testflight.apple.com/join/dQTw4Q1Y
+
+Google Play Beta: https://play.google.com/apps/testing/com.coronaspectator.app
 
 ## Screenshots
 
