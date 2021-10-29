@@ -46,6 +46,7 @@ flutter run
 If you would like to use the app via TestFlight or Google Play Beta, you can download the apps with the following links below:
 
 TestFlight: https://testflight.apple.com/join/dQTw4Q1Y
+
 Google Play Beta: https://play.google.com/apps/testing/com.coronaspectator.app
 
 ## Screenshots
