@@ -21,6 +21,9 @@
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
     <meta-data android:name="flutterEmbedding" android:value="2" />
   </application>
+
+  <uses-permission android:name="android.permission.INTERNET" android:maxSdkVersion="28" />
+
   <queries>
     <intent>
       <action android:name="android.intent.action.VIEW" />
@@ -31,4 +34,5 @@
       <data android:scheme="tel" />
     </intent>
   </queries>
+
 </manifest>
