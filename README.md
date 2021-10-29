@@ -8,6 +8,8 @@ Corona Spectator is a coronavirus statistics and news app that has real time glo
 
 [Screenshots](#screenshots)
 
+[Video](https://streamable.com/ucf84s)
+
 ## About
 
 At first I didn't have the intentions of making Corona Spectator because I personally thought that Coronavirus wasn't as big of an issue as it was last year. However, after taking a look our current circumstances of the Delta Variant, I thought it was necessary to create it. An all in one solution to get all the coronavirus information and help you need is something I think everyone should have during the pandemic. It's a long fight and we all must endure. So I hope this app will help you stay safe 🙏🏾.
