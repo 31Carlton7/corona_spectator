@@ -29,7 +29,7 @@ To build the app I utilized the [Flutter SDK](https://flutter.dev) as the UI Fra
 - _News_: Get the latest coronavirus news and updates.
 - _Prevention_: Get prevention tips to stay safe amid the pandemic.
 - _Symptoms_: Take a look at symptoms of the Coronavirus and see if you maybe experiencing any of them.
-- _Symptom Checker (SOON)_: Analyze your current state of being and get see if you may have coronavirus and get recommended to the nearest clinic.
+- _Nearest Locations_: Get the nearest vaccine clinics, treat centers and testing sites for apple and google maps directly from the app.
 - _Emergency Contact Hotlines_: Call 911, 119, and 112 straight from the app incase of an emergency.
 - _Quick Links_: Quick links to coronavirus websites to seek more information.
 
@@ -47,7 +47,7 @@ If you would like to use the app via TestFlight or Google Play Beta, you can dow
 
 TestFlight: https://testflight.apple.com/join/dQTw4Q1Y
 
-Google Play Beta: https://play.google.com/apps/testing/com.coronaspectator.app
+Google Play Beta: https://play.google.com/apps/testing/com.coronaspectator.app (Under Review)
 
 ## Screenshots
 
