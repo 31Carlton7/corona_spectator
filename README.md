@@ -145,6 +145,7 @@ Google Play Beta: https://play.google.com/apps/testing/com.coronaspectator.app (
 
 - [Medium](https://medium.com/flutterforce/flutterforce-week-142-b42a881dda5c)
 - [Made With Flutter](https://madewithflutter.net/corona-spectator/)
+- [Awesome Open-Source](https://awesomeopensource.com/project/31Carlton7/corona_spectator)
 
 ## Socials
 
