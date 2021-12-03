@@ -1,6 +1,6 @@
 <img src="https://github.com/31Carlton7/corona_spectator/blob/master/assets/images/banner.png"> </img>
 
-# Corona Spectator
+# Corona Spectato
 
 Corona Spectator is a coronavirus statistics and news app that has real time global COVID-19 stats. It includes useful tips to help guide your way through the pandemic. Be sure to leave a star 🌟.
 
